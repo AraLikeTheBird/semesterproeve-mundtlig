@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #380f00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative; /* IMPORTANT FIX */
+}
+
+/* LOGO */
+.logo {
+    color: #0affcf;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* LINKS (DESKTOP) */
+.navlinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navlinks a {
+    color: #0affcf;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navlinks a:hover {
+    color: #a82f2f;
+}
+
+/* HAMBURGER (hidden on desktop) */
+.burgertoggle {
+    display: none;
+    font-size: 28px;
+    color: #0affcf;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .burgertoggle {
+        display: block;
+    }
+
+    .navlinks {
+        display: none;
+        flex-direction: column;
+
+        background-color: #380f00;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+        z-index: 999; /* 🔥 ensures it appears above everything */
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
+}

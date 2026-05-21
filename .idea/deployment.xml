@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="arabird" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="arabird">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/sem1proeve" local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
