@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="5/21-2026&#10;&#10;textboxes front page">
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
@@ -100,7 +100,8 @@
       <workItem from="1779352186157" duration="12000" />
       <workItem from="1779352233644" duration="1899000" />
       <workItem from="1779372601288" duration="24290000" />
-      <workItem from="1779400487557" duration="4555000" />
+      <workItem from="1779400487557" duration="6763000" />
+      <workItem from="1779429878079" duration="11622000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -134,7 +135,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779400471654</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5/21-2026&#10;&#10;textboxes and video, still need help">
+      <option name="closed" value="true" />
+      <created>1779405112807</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779405112807</updated>
+    </task>
+    <task id="LOCAL-00006" summary="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now">
+      <option name="closed" value="true" />
+      <created>1779406878973</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779406878974</updated>
+    </task>
+    <task id="LOCAL-00007" summary="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now">
+      <option name="closed" value="true" />
+      <created>1779406906569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779406906569</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +180,8 @@
     <MESSAGE value="nav bar for index" />
     <MESSAGE value="started adding text content" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes front page" />
-    <option name="LAST_COMMIT_MESSAGE" value="5/21-2026&#10;&#10;textboxes front page" />
+    <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help" />
+    <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now" />
+    <option name="LAST_COMMIT_MESSAGE" value="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now" />
   </component>
 </project>
