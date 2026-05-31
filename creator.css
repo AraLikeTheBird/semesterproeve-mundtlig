@@ -152,7 +152,7 @@ footer a:hover{
     gap: 20px;
     background-color: #380f001f;
     margin:5px;
-    max-height: 665px;
+    height: 665px;
 }
 
 /* MODE BUTTONS */
@@ -193,7 +193,8 @@ footer a:hover{
 
 /* OPTIONS GRID */
 .controls {
-    width: 100%;
+    flex: 1;
+    min-height: 0;
 }
 
 .options {
@@ -215,6 +216,37 @@ footer a:hover{
 
 .hidden {
     display: none;
+}
+
+.silhouette-mode img {
+    filter: grayscale(1) brightness(0);
+}
+.category-group button.active {
+    background: #380f00a1;
+    color: #FC6735;
+}
+
+.modes button.active {
+    background-color: #A86A4A;
+    color: white;
+}
+.category-group button.active {
+    background-color: #A86A4A;
+    color: white;
+}
+.options .active {
+    background-color: #A86A4A;
+    color: white;
+}
+
+/*proportion sliders*/
+.options input[type="range"] {
+    width: 120%;
+}
+.options label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 /* responsive scale */

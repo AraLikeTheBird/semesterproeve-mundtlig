@@ -41,8 +41,8 @@
                 <!--modes-->
                 <div class="modes">
                     <button data-mode="shape">Shape</button>
-                    <button data-mode="silhouette">Silhouette</button>
                     <button data-mode="proportion">Proportion</button>
+                    <button data-mode="silhouette">Silhouette</button>
                 </div>
                 <!--CATEGORIE-->
                 <div class="categories">
@@ -59,19 +59,21 @@
                         <button data-category="clothes">Clothes</button>
                         <button data-category="overclothes">top layers</button>
                         <button data-category="accesories">Accessories</button>
+                        <button data-category="silhouette-mode">Silhouette Mode</button>
                     </div>
 
                     <!-- PROPORTION CATEGORIES -->
                     <div class="category-group hidden" data-mode="proportion">
-                        <button data-category="arms">Height</button>
-                        <button data-category="body">Limbs</button>
-                        <button data-category="legs">Limbs</button>
+                     <!--   <button data-category="arms">arms</button> -->
+                        <button data-category="head">head</button>
+                        <button data-category="body">body</button>
+                    <!-- <button data-category="legs">leg</button> -->
                     </div>
 
                 </div>
                 <!-- SHAPE OPTIONS -->
                 <div class="options" data-group="shape" data-category="head">
-                    <div class="option" data-value="round">Round<img src="assets/button%20covers/round%20head%20cover.png" width="45px"></div>
+                    <div class="option" data-value="round">Round</div>
                     <div class="option" data-value="tall-Rectangle">Tall Rectangle</div>
                     <div class="option" data-value="square">Square</div>
                     <div class="option" data-value="upwards-Triangle">Upwards Triangle</div>
@@ -129,21 +131,34 @@
                 </div>
 
                 <!-- proportions-->
-                <div class="options hidden" data-group="proportion" data-category="arms">
-                    <div class="option"> option 1</div>
-                    <div class="option"> option 2</div>
-                    <div class="option"> option 3</div>
+               <!-- <div class="options hidden" data-group="proportion" data-category="arms">
+                    <label>Width</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="width">
+
+                    <label>Height</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="height">
+                </div> -->
+                <div class="options hidden" data-group="proportion" data-category="head">
+                    <label>Width</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="width">
+
+                    <label>Height</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="height">
                 </div>
                 <div class="options hidden" data-group="proportion" data-category="body">
-                    <div class="option"> option 1</div>
-                    <div class="option"> option 2</div>
-                    <div class="option"> option 3</div>
+                    <label>Width</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="width">
+
+                    <label>Height</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="height">
                 </div>
-                <div class="options hidden" data-group="proportion" data-category="legs">
-                    <div class="option"> option 1</div>
-                    <div class="option"> option 2</div>
-                    <div class="option"> option 3</div>
-                </div>
+               <!-- <div class="options hidden" data-group="proportion" data-category="legs">
+                    <label>Width</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="width">
+
+                    <label>Height</label>
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="height">
+                </div> -->
 
                 <!-- PROPORTION OPTIONS -->
                 <div class="options hidden" data-group="proportion" data-category="slider">
