@@ -5,7 +5,7 @@
       <paths name="arabird">
         <serverdata>
           <mappings>
-            <mapping deploy="/sem1proeve" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/proevetest" local="$PROJECT_DIR$" web="/" />
             <mapping local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>

@@ -107,11 +107,10 @@ main{
     margin:5px;
     margin-left: 23px;
     text-align: justify;
-    border: 4px #380f00;
 }
 
 .card h3{
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 img.profile-image {
     border-radius: 50%;

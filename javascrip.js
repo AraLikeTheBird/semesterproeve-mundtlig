@@ -1,3 +1,4 @@
+console.log("JS LOADED");
     /*burger button*/
     const burger = document.querySelector(".burgertoggle");
     const nav = document.querySelector(".navlinks");
@@ -7,16 +8,23 @@
 
     //quick scroll
 
-    const scrollBtn = document.getElementById("scrollTopBtn");
 
-    // show button when scrolling
-    window.onscroll = function () {
-        if (document.documentElement.scrollTop > 200) {
-            scrollBtn.style.display = "block";
-        } else {
-            scrollBtn.style.display = "none";
-        }
-    };
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 
     // scroll to top on click
     scrollBtn.addEventListener("click", function () {
