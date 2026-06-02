@@ -29,14 +29,43 @@ scrollBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+window.debugState = debugState;
+function debugState(label = "") {
+    console.log("========== DEBUG STATE:", label, "==========");
 
+    console.log({
+        currentMode,
+        currentCategory,
+        currentOption,
+        savedOptions
+    });
+
+    const visibleGroup = document.querySelector(
+        `.options[data-group="${currentMode}"][data-category="${currentCategory}"]`
+    );
+
+    console.log("VISIBLE GROUP:", visibleGroup);
+
+    if (visibleGroup) {
+        console.log("OPTIONS:");
+        visibleGroup.querySelectorAll(".option").forEach(opt => {
+            console.log({
+                value: opt.dataset.value,
+                isActive: opt.classList.contains("active"),
+                text: opt.textContent.trim()
+            });
+        });
+    }
+
+    console.log("=====================================");
+}
 /* =========================
    STATE
 ========================= */
 let currentMode = "shape";
 let currentCategory = "head";
 let currentOption = "";
-
+let savedOptions = {};
 let silhouetteActive = false;
 
 let proportions = {
@@ -70,7 +99,9 @@ const modeInfo = {
    RESET HELPERS
 ========================= */
 function resetOptions() {
-    document.querySelectorAll(".option").forEach(o => o.classList.remove("active"));
+    document.querySelectorAll(".option")
+        .forEach(o => o.classList.remove("active"));
+
     currentOption = "";
 }
 
@@ -106,19 +137,33 @@ function updateHeadings() {
 ========================= */
 function setDefaultOption() {
 
-    const optionGroup = document.querySelector(
-        `.options[data-group="${currentMode}"][data-category="${currentCategory}"]`
+    const optionGroups = document.querySelectorAll(".options");
+
+    const optionGroup = Array.from(optionGroups).find(g =>
+        g.dataset.group === currentMode &&
+        g.dataset.category === currentCategory
     );
 
     if (!optionGroup) return;
 
-    const firstOption = optionGroup.querySelector(".option");
-    if (!firstOption) return;
+    const options = optionGroup.querySelectorAll(".option");
+    if (!options.length) return;
 
     resetOptions();
 
-    firstOption.classList.add("active");
-    currentOption = firstOption.dataset.value;
+    const saved = savedOptions[currentCategory];
+
+    let activeOption =
+        saved
+            ? optionGroup.querySelector(`[data-value="${saved}"]`)
+            : null;
+
+    if (!activeOption) {
+        activeOption = options[0];
+    }
+
+    activeOption.classList.add("active");
+    currentOption = activeOption.dataset.value;
 
     updateAvatarLayer(currentOption);
 }
@@ -144,7 +189,10 @@ function setDefaultSelections() {
     switchCategories();
     switchOptions();
 
-    setDefaultOption();
+    requestAnimationFrame(() => {
+        setDefaultOption();
+        updateHeadings();
+    });
 }
 
 /* =========================
@@ -160,6 +208,7 @@ document.querySelectorAll(".modes button").forEach(btn => {
 
         currentMode = btn.dataset.mode;
         currentCategory = modeDefaults[currentMode];
+        debugState("MODE SWITCH");
 
         leftInfo.textContent = modeInfo[currentMode];
 
@@ -176,20 +225,27 @@ document.querySelectorAll(".category-group button").forEach(btn => {
 
         const category = btn.dataset.category;
 
+        // 🔥 SILHOUETTE TOGGLE (FIXED)
         if (category === "silhouette-mode") {
+
             silhouetteActive = !silhouetteActive;
 
-            document.getElementById("avatarPreview")
-                .classList.toggle("silhouette-mode");
+            document
+                .getElementById("avatarPreview")
+                .classList.toggle("silhouette-mode", silhouetteActive);
 
             btn.classList.toggle("active", silhouetteActive);
+
             return;
         }
 
-        resetCategories();
-        btn.classList.add("active");
-
+        // NORMAL CATEGORY FLOW
         currentCategory = category;
+
+        document.querySelectorAll(".category-group button")
+            .forEach(b => b.classList.remove("active"));
+
+        btn.classList.add("active");
 
         resetOptions();
         switchOptions();
@@ -204,16 +260,36 @@ document.querySelectorAll(".options").forEach(group => {
 
         if (!e.target.classList.contains("option")) return;
 
-        resetOptions();
+        // clear current UI in group
+        group.querySelectorAll(".option")
+            .forEach(o => o.classList.remove("active"));
+
+        // set new active
         e.target.classList.add("active");
 
+        // update state
         currentOption = e.target.dataset.value;
+        savedOptions[currentCategory] = currentOption;
 
         updateAvatarLayer(currentOption);
-        updateHeadings();
     });
 });
+function switchOptions() {
 
+    document.querySelectorAll(".options").forEach(group => {
+
+        const show =
+            group.dataset.group === currentMode &&
+            group.dataset.category === currentCategory;
+
+        group.classList.toggle("hidden", !show);
+    });
+
+    // 🔥 CRITICAL FIX: wait for DOM to update before highlighting
+    requestAnimationFrame(() => {
+        setDefaultOption();
+    });
+}
 /* =========================
    AVATAR UPDATE
 ========================= */
@@ -268,18 +344,39 @@ function switchCategories() {
     }
 }
 
-function switchOptions() {
+function setDefaultOption() {
 
-    document.querySelectorAll(".options").forEach(group => {
+    const optionGroup = Array.from(document.querySelectorAll(".options"))
+        .find(g =>
+            g.dataset.group === currentMode &&
+            g.dataset.category === currentCategory
+        );
 
-        const show =
-            group.dataset.group === currentMode &&
-            group.dataset.category === currentCategory;
+    if (!optionGroup) return;
 
-        group.classList.toggle("hidden", !show);
-    });
+    const options = optionGroup.querySelectorAll(".option");
+    if (!options.length) return;
 
-    setDefaultOption();
+    const saved = savedOptions[currentCategory];
+
+    let activeOption =
+        saved
+            ? optionGroup.querySelector(`[data-value="${saved}"]`)
+            : null;
+
+    if (!activeOption) {
+        activeOption = options[0];
+    }
+
+    // 🔥 clear ONLY inside correct group
+    optionGroup.querySelectorAll(".option")
+        .forEach(o => o.classList.remove("active"));
+
+    activeOption.classList.add("active");
+
+    currentOption = activeOption.dataset.value;
+
+    updateAvatarLayer(currentOption);
 }
 
 /* =========================
