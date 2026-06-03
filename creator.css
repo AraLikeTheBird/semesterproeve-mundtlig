@@ -172,8 +172,8 @@ footer a:hover{
     width: 400px;
     aspect-ratio: 1 / 1;
     background: #FFE9D9;
-    overflow: hidden;
     flex-shrink: 0;
+    overflow: visible;
 }
 .preview img {
     position: absolute;
@@ -189,6 +189,7 @@ footer a:hover{
 }
 #head-layer {
     z-index: 2;
+    transform-origin: center bottom;
 }
 
 /* OPTIONS GRID */
@@ -248,6 +249,15 @@ footer a:hover{
     margin-top: 10px;
     font-size: 14px;
 }
+.mobile-info {
+    display: none;
+    padding: 15px;
+    margin: 10px;
+    background: #380f001f;
+    color: #380f00;
+    border: 1px solid #ccc;
+}
+
 
 /* responsive scale */
 @media (max-width: 768px) {
@@ -296,5 +306,11 @@ footer a:hover{
     .logoimg{
         display:flex;
         justify-content: center;
+    }
+    .mobile-info {
+        display: block;
+    }
+    .left, .right {
+        display: none;
     }
 }

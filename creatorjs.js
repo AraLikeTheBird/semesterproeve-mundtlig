@@ -5,7 +5,6 @@ console.log("JS LOADED");
 ========================= */
 const burger = document.querySelector(".burgertoggle");
 const nav = document.querySelector(".navlinks");
-
 burger.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
@@ -29,6 +28,9 @@ scrollBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+
+
 window.debugState = debugState;
 function debugState(label = "") {
     console.log("========== DEBUG STATE:", label, "==========");
@@ -67,7 +69,6 @@ let currentCategory = "head";
 let currentOption = "";
 let savedOptions = {};
 let silhouetteActive = false;
-
 let proportions = {
     body: { width: 1, height: 1 },
     head: { width: 1, height: 1 }
@@ -79,7 +80,22 @@ let proportions = {
 const leftTitle = document.getElementById("leftTitle");
 const rightTitle = document.getElementById("rightTitle");
 const leftInfo = document.getElementById("leftInfo");
+const rightInfo = document.getElementById("rightInfo");
+const optionDescriptions = {
+    "pointed-ears": "Sharp, animal-like ears that enhance expressive silhouette.",
+    "human-ears": "Standard human ear shape with neutral proportions.",
+    "canine/cat-ears": "Animal-inspired ears that change overall character style.",
+    "grazer-ears": "Broad, soft ear shapes inspired by grazing animals.",
 
+    "bob-hair": "Short, rounded haircut framing the face.",
+    "slick-back": "Hair pulled tightly back for a clean silhouette.",
+    "half-updo": "Hair partially tied back while keeping volume.",
+    "messy-bun": "Loose bun with irregular strands for a casual look.",
+    "long-loose-hair": "Extended hair length with natural flow."
+};
+const mobileInfoBox = document.getElementById("mobileInfoBox");
+const mobileTitle = document.getElementById("mobileTitle");
+const mobileText = document.getElementById("mobileText");
 /* =========================
    CONFIG
 ========================= */
@@ -124,12 +140,32 @@ function formatText(text) {
 /* =========================
    HEADINGS
 ========================= */
-function updateHeadings() {
-    leftTitle.textContent = `Why is ${formatText(currentMode)} important?`;
+function updateHeadings(activeProp = null) {
 
+    leftTitle.textContent =
+        `Why is ${formatText(currentMode)} important?`;
+
+    // PROPORTION MODE
+    if (currentMode === "proportion") {
+
+        rightTitle.textContent = activeProp
+            ? `Adjusting ${formatText(currentCategory)} ${activeProp}`
+            : `Adjusting ${formatText(currentCategory)} proportions`;
+
+        rightInfo.textContent =
+            "Use sliders to adjust size values.";
+
+        return;
+    }
+
+    // NORMAL MODES
     rightTitle.textContent = currentOption
         ? `What does ${formatText(currentOption)} do?`
         : "What does X element do?";
+
+    rightInfo.textContent = currentOption
+        ? (optionDescriptions?.[currentOption] || "No description available for this option.")
+        : "Click an option to see details here.";
 }
 
 /* =========================
@@ -260,18 +296,18 @@ document.querySelectorAll(".options").forEach(group => {
 
         if (!e.target.classList.contains("option")) return;
 
-        // clear current UI in group
         group.querySelectorAll(".option")
             .forEach(o => o.classList.remove("active"));
 
-        // set new active
         e.target.classList.add("active");
 
-        // update state
         currentOption = e.target.dataset.value;
         savedOptions[currentCategory] = currentOption;
 
         updateAvatarLayer(currentOption);
+
+        // 🔥 THIS IS WHAT YOU WERE MISSING
+        updateHeadings();
     });
 });
 function switchOptions() {
@@ -294,10 +330,12 @@ function switchOptions() {
    AVATAR UPDATE
 ========================= */
 function updateAvatarLayer(value) {
-
+    console.log("CATEGORY:", currentCategory, "VALUE:", value);
     const layerType = currentCategory;
+
     const img = document.getElementById(`${layerType}-layer`);
 
+    console.log("trying to find image:", img);
     if (!img) return;
 
     img.src = `assets/${layerType}-${value}.png`;
@@ -314,11 +352,32 @@ document.querySelectorAll('input[type="range"]').forEach(slider => {
 
         proportions[currentCategory][prop] = value;
 
-        document.getElementById("body-layer").style.transform =
-            `scale(${proportions.body.width}, ${proportions.body.height})`;
+        const body = document.getElementById("body-layer");
+        const head = document.getElementById("head-layer");
 
-        document.getElementById("head-layer").style.transform =
-            `scale(${proportions.head.width}, ${proportions.head.height})`;
+        const bodyW = proportions.body.width;
+        const bodyH = proportions.body.height;
+
+        const headW = proportions.head.width;
+        const headH = proportions.head.height;
+
+        // ✅ scale body
+        body.style.transform = `scale(${bodyW}, ${bodyH})`;
+
+        // ✅ scale head
+        head.style.transform = `scale(${headW}, ${headH})`;
+
+        // 🔥 compute offset so head sits on top of body
+        const baseHeight = body.getBoundingClientRect().height;
+        const offsetY = (bodyH - 1) * baseHeight;
+
+        // ✅ apply vertical correction
+        head.style.transform += ` translateY(${-offsetY}px)`;
+
+        if (currentMode === "proportion") {
+            setProportionContext();
+        }
+        updateHeadings(prop);
     });
 });
 

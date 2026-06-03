@@ -33,8 +33,9 @@
         <div class="creator">
             <!-- AVATAR PREVIEW -->
             <div class="preview" id="avatarPreview">
-                <img id="head-layer" src="assets/head-round.png">
-                <img id="body-layer" src="assets/body-round.png">
+                <img id="head-layer" src="assets/head-start-image.png">
+                <img id="body-layer" src="assets/body-empty-default.png">
+                <img id="physicaltraits-layer" src="assets/physicaltraits-empty-default.png">
             </div>
             <!-- CONTROLS -->
             <div class="controls">
@@ -73,6 +74,7 @@
                 </div>
                 <!-- SHAPE OPTIONS -->
                 <div class="options" data-group="shape" data-category="head">
+                    <div class="option" data-value="start-image">Start image</div>
                     <div class="option" data-value="round">Round</div>
                     <div class="option" data-value="tall-Rectangle">Tall Rectangle</div>
                     <div class="option" data-value="square">Square</div>
@@ -80,6 +82,7 @@
                     <div class="option" data-value="reverse-Triangle">Reverse Diamond</div>
                 </div>
                 <div class="options hidden" data-group="shape" data-category="body">
+                    <div class="option" data-value="empty-default">Empty</div>
                     <div class="option" data-value="round">Round</div>
                     <div class="option" data-value="tall-Rectangle">Tall Rectangle</div>
                     <div class="option" data-value="square">Square</div>
@@ -89,6 +92,7 @@
 
                 <!-- SILHOUETTE OPTIONS -->
                 <div class="options hidden" data-group="silhouette" data-category="physicaltraits">
+                    <div class="option" data-value="empty-default">Empty</div>
                     <div class="option" data-value="pointed-ears">Pointed ears</div>
                     <div class="option" data-value="human-ears">Human ears</div>
                     <div class="option" data-value="canine/cat-ears">canine/cat ears</div>
@@ -102,7 +106,8 @@
 
                 </div>
                 <div class="options hidden" data-group="silhouette" data-category="clothes">
-                    <div class="option" data-value="wide-pants">wide pants <img src="assets/button%20covers/round%20head%20cover.png" width="45px"></div>
+                    <div class="option" data-value="empty-default">Empty</div>
+                    <div class="option" data-value="wide-pants">wide pants</div>
                     <div class="option" data-value="baggy-pants">Baggy pants</div>
                     <div class="option" data-value="tight-pants"> tight pants</div>
                     <div class="option" data-value="tapered-pants">tapered pants</div>
@@ -116,6 +121,7 @@
                     <div class="option" data-value="loose-wrap-skirt">loose wrap shirt <img src="assets/button%20covers/round%20head%20cover.png" width="45px"></div>
                 </div>
                 <div class="options hidden" data-group="silhouette" data-category="overclothes">
+                    <div class="option" data-value="empty-default">Empty</div>
                     <div class="option" data-value="bolero-jacket">bolero jacket</div>
                     <div class="option" data-value="trench-coat">trench coat</div>
                     <div class="option" data-value="cape">cape</div>
@@ -126,6 +132,7 @@
                     <div class="option" data-value="shoulder">shoulder jacket</div>
                 </div>
                 <div class="options hidden" data-group="silhouette" data-category="accesories">
+                    <div class="option" data-value="empty-default">Empty</div>
                     <div class="option">Slim</div>
                     <div class="option">Wide</div>
                 </div>
@@ -139,11 +146,11 @@
                     <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="height">
                 </div> -->
                 <div class="options hidden" data-group="proportion" data-category="head">
-                    <label>Width</label>
+                    <label data-value="width">Width</label>
                     <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="width">
 
                     <label>Height</label>
-                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="height">
+                    <input type="range" min="0.5" max="1.5" step="0.1" value="1" data-prop="height" >
                 </div>
                 <div class="options hidden" data-group="proportion" data-category="body">
                     <label>Width</label>
@@ -176,6 +183,10 @@
             <h2 id="rightTitle">What does X element do?</h2>
         <p id="rightInfo">Click an option to learn more.</p>
     </div>
+        <div id="mobileInfoBox" class="mobile-info hidden">
+            <h2 id="mobileTitle"></h2>
+            <p id="mobileText"></p>
+        </div>
     </div>
 </main>
 <footer>
