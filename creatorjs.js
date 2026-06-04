@@ -362,11 +362,18 @@ document.querySelectorAll('input[type="range"]').forEach(slider => {
 
         proportions[currentCategory][prop] = value;
 
-        document.getElementById("body-layer").style.transform =
-            `scale(${proportions.body.width}, ${proportions.body.height})`;
+        const body = document.getElementById("body-layer");
+        const head = document.getElementById("head-layer");
 
-        document.getElementById("head-layer").style.transform =
-            `scale(${proportions.head.width}, ${proportions.head.height})`;
+        const bodyW = proportions.body.width;
+        const bodyH = proportions.body.height;
+
+        const headW = proportions.head.width;
+        const headH = proportions.head.height;
+
+        // KEEP centering transform + add scale
+        body.style.transform = `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+        head.style.transform = `translateX(-50%) scale(${headW}, ${headH})`;
     });
 });
 

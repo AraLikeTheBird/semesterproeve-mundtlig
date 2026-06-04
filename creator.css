@@ -179,7 +179,7 @@ footer a img:hover{
     padding: 10px;
     cursor: pointer;
 }
-/* AVATAR PREVIEW
+/* AVATAR PREVIEW*/
 .preview {
     position: relative;
     width: 400px;
@@ -195,7 +195,7 @@ footer a img:hover{
     width: 100%;
     height: 100%;
     object-fit: contain;
-}*/
+}
 .preview {
     position: relative;
     width: 400px;
