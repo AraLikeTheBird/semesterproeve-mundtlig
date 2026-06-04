@@ -135,7 +135,6 @@ main{
     font-size: clamp(16px, 1vh, 20px);
 
 }
-
 .video1{
     width: 98%;
     height: 98%;
@@ -156,10 +155,6 @@ main{
     color: #380F00;
     text-align: justify;
 }
-.page{
-    flex:1;
-}
-
 footer{
     text-align: center;
     padding: 20px;
