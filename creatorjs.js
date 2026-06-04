@@ -362,27 +362,11 @@ document.querySelectorAll('input[type="range"]').forEach(slider => {
 
         proportions[currentCategory][prop] = value;
 
-        const body = document.getElementById("body-layer");
-        const head = document.getElementById("head-layer");
+        document.getElementById("body-layer").style.transform =
+            `scale(${proportions.body.width}, ${proportions.body.height})`;
 
-        const bodyW = proportions.body.width;
-        const bodyH = proportions.body.height;
-
-        const headW = proportions.head.width;
-        const headH = proportions.head.height;
-
-        // scale body first
-        body.style.transform = `scale(${bodyW}, ${bodyH})`;
-
-
-        const baseHeight = body.offsetHeight / bodyH;
-        const offsetY = (bodyH - 1) * baseHeight;
-
-        // scale head + attach correction
-        head.style.transform =
-            `scale(${headW}, ${headH}) translateY(${-offsetY}px)`;
-
-        updateHeadings(prop);
+        document.getElementById("head-layer").style.transform =
+            `scale(${proportions.head.width}, ${proportions.head.height})`;
     });
 });
 
