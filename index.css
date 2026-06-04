@@ -219,19 +219,6 @@ footer a img:hover{
         flex-direction: column;
         align-items: center;
     }
-    .page {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-
-    .right {
-        grid-template-rows: auto;
-    }
-    .tbox{
-        margin: 5px;
-        background: #380f001f;
-        padding: 10px;
-        }
     footer {
         padding: 20px;
         height: auto;   /* IMPORTANT */
@@ -247,5 +234,47 @@ footer a img:hover{
     footer a {
         display: block;
     }
+
+    .page {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    /* LEFT becomes full width row 1 */
+    .left {
+        margin: 10px;
+    }
+
+    /* RIGHT becomes row 2 */
+    .right {
+        margin: 10px;
+    }
+    .right img {
+        margin: 10px;
+        align-items: center; /* prevents weird centering shrink */
+        width: 100%;
+    }
+
+    /* reduce spacing between blocks */
+    .tbox {
+        max-height: 160px; /* smaller scroll areas */
+        font-size: 14px;
+    }
+
+    .tbox .title {
+        font-size: clamp(18px, 4vw, 24px);
+    }
+
+    .tbox .content {
+        font-size: clamp(14px, 3.5vw, 18px);
+    }
+
+    .video1 {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
 }
 
