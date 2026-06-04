@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="5/25- 2026&#10;18:06&#10;about to start js coding?">
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/4-26&#10;00:47 am&#10;responsiveness">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/body-round.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/body-round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/startimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/contact.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creatorjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/creatorjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780393269558</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="6/4-26&#10;00:47 am&#10;responsiveness">
+      <option name="closed" value="true" />
+      <created>1780526853015</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780526853015</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +273,8 @@
     <MESSAGE value="5/22- 2026&#10;15:22&#10;working in about page" />
     <MESSAGE value="5/25- 2026&#10;18:06&#10;about to start js coding?" />
     <MESSAGE value="6/2-2026&#10;11:40 AM&#10;&#10;save system for selected options (and all the bugs it made fixed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/2-2026&#10;11:40 AM&#10;&#10;save system for selected options (and all the bugs it made fixed)" />
+    <MESSAGE value="6/4-26&#10;00:47 am&#10;responsiveness" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/4-26&#10;00:47 am&#10;responsiveness" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

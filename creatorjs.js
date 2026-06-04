@@ -1,17 +1,14 @@
 console.log("JS LOADED");
-
-/* =========================
-   BURGER MENU
-========================= */
+/*burger button*/
 const burger = document.querySelector(".burgertoggle");
 const nav = document.querySelector(".navlinks");
 burger.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
-/* =========================
-   SCROLL BUTTON
-========================= */
+//quick scroll
+
+
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
@@ -29,6 +26,13 @@ scrollBtn.addEventListener("click", () => {
     });
 });
 
+// scroll to top on click
+scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 
 
 window.debugState = debugState;
@@ -81,6 +85,9 @@ const leftTitle = document.getElementById("leftTitle");
 const rightTitle = document.getElementById("rightTitle");
 const leftInfo = document.getElementById("leftInfo");
 const rightInfo = document.getElementById("rightInfo");
+/* =========================
+   CONFIG
+========================= */
 const optionDescriptions = {
     "pointed-ears": "Sharp, animal-like ears that enhance expressive silhouette.",
     "human-ears": "Standard human ear shape with neutral proportions.",
@@ -93,12 +100,6 @@ const optionDescriptions = {
     "messy-bun": "Loose bun with irregular strands for a casual look.",
     "long-loose-hair": "Extended hair length with natural flow."
 };
-const mobileInfoBox = document.getElementById("mobileInfoBox");
-const mobileTitle = document.getElementById("mobileTitle");
-const mobileText = document.getElementById("mobileText");
-/* =========================
-   CONFIG
-========================= */
 const modeDefaults = {
     shape: "head",
     silhouette: "physicaltraits",
@@ -145,28 +146,37 @@ function updateHeadings(activeProp = null) {
     leftTitle.textContent =
         `Why is ${formatText(currentMode)} important?`;
 
-    // PROPORTION MODE
+    /* =========================
+       PROPORTION MODE (FIXED)
+    ========================= */
     if (currentMode === "proportion") {
 
-        rightTitle.textContent = activeProp
-            ? `Adjusting ${formatText(currentCategory)} ${activeProp}`
-            : `Adjusting ${formatText(currentCategory)} proportions`;
+        const propName = activeProp
+            ? formatText(activeProp)
+            : "proportions";
+
+        rightTitle.textContent =
+            `Adjusting ${formatText(currentCategory)} ${propName}`;
 
         rightInfo.textContent =
-            "Use sliders to adjust size values.";
+            `Use the sliders to adjust ${propName} of the ${currentCategory}.`;
+
 
         return;
     }
 
-    // NORMAL MODES
+    /* =========================
+       NORMAL MODES
+    ========================= */
     rightTitle.textContent = currentOption
         ? `What does ${formatText(currentOption)} do?`
-        : "What does X element do?";
+        : "What does this element do?";
 
     rightInfo.textContent = currentOption
-        ? (optionDescriptions?.[currentOption] || "No description available for this option.")
+        ? (optionDescriptions?.[currentOption] || "No description available.")
         : "Click an option to see details here.";
 }
+
 
 /* =========================
    DEFAULT OPTION
@@ -361,25 +371,21 @@ document.querySelectorAll('input[type="range"]').forEach(slider => {
         const headW = proportions.head.width;
         const headH = proportions.head.height;
 
-        // ✅ scale body
+        // scale body first
         body.style.transform = `scale(${bodyW}, ${bodyH})`;
 
-        // ✅ scale head
-        head.style.transform = `scale(${headW}, ${headH})`;
 
-        // 🔥 compute offset so head sits on top of body
-        const baseHeight = body.getBoundingClientRect().height;
+        const baseHeight = body.offsetHeight / bodyH;
         const offsetY = (bodyH - 1) * baseHeight;
 
-        // ✅ apply vertical correction
-        head.style.transform += ` translateY(${-offsetY}px)`;
+        // scale head + attach correction
+        head.style.transform =
+            `scale(${headW}, ${headH}) translateY(${-offsetY}px)`;
 
-        if (currentMode === "proportion") {
-            setProportionContext();
-        }
         updateHeadings(prop);
     });
 });
+
 
 /* =========================
    VIEW SWITCHING

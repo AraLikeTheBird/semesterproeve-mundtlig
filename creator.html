@@ -2,23 +2,25 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avatar Creator</title>
     <link rel="stylesheet" href="creator.css">
 </head>
 <body>
 <header>
-    <nav>
-        <a class="logo" href="index.html"><img src="assets/placeholder-logo.png" alt="scary esa logo placeholder"
-                                               width="50px" height="50px"></a>
+    <header>
+        <nav>
+            <a class="logo" href="index.html"><img src="assets/placeholder-logo.png" alt="scary esa logo placeholder" width="50px" height="50px"></a>
 
-        <ul class="navlinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="creator.html" target="_blank">Creator</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="burgertoggle">☰</div>
-    </nav>
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="creator.html" target="_blank">Creator</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burgertoggle">☰</div>
+        </nav>
+    </header>
 </header>
 <main>
     <div class="app">
@@ -41,33 +43,33 @@
             <div class="controls">
                 <!--modes-->
                 <div class="modes">
-                    <button data-mode="shape">Shape</button>
-                    <button data-mode="proportion">Proportion</button>
-                    <button data-mode="silhouette">Silhouette</button>
+                    <button data-mode="shape" class="mode">Shape</button>
+                    <button data-mode="proportion" class="mode">Proportion</button>
+                    <button data-mode="silhouette" class="mode">Silhouette</button>
                 </div>
                 <!--CATEGORIE-->
                 <div class="categories">
 
                     <!-- SHAPE CATEGORIES -->
                     <div class="category-group" data-mode="shape">
-                        <button data-category="head">Head</button>
-                        <button data-category="body">body</button>
+                        <button data-category="head" class="cat">Head</button>
+                        <button data-category="body" class="cat">body</button>
                     </div>
 
                     <!-- SILHOUETTE CATEGORIES -->
                     <div class="category-group hidden" data-mode="silhouette">
-                        <button data-category="physicaltraits">Ears and hair</button>
-                        <button data-category="clothes">Clothes</button>
-                        <button data-category="overclothes">top layers</button>
-                        <button data-category="accesories">Accessories</button>
-                        <button data-category="silhouette-mode">Silhouette Mode</button>
+                        <button data-category="physicaltraits" class="cat">Ears and hair</button>
+                        <button data-category="clothes" class="cat">Clothes</button>
+                        <button data-category="overclothes" class="cat">top layers</button>
+                        <button data-category="accesories" class="cat">Accessories</button>
+                        <button data-category="silhouette-mode" class="cat">Silhouette Mode</button>
                     </div>
 
                     <!-- PROPORTION CATEGORIES -->
                     <div class="category-group hidden" data-mode="proportion">
                      <!--   <button data-category="arms">arms</button> -->
-                        <button data-category="head">head</button>
-                        <button data-category="body">body</button>
+                        <button data-category="head" class="cat">head</button>
+                        <button data-category="body" class="cat">body</button>
                     <!-- <button data-category="legs">leg</button> -->
                     </div>
 
@@ -183,16 +185,10 @@
             <h2 id="rightTitle">What does X element do?</h2>
         <p id="rightInfo">Click an option to learn more.</p>
     </div>
-        <div id="mobileInfoBox" class="mobile-info hidden">
-            <h2 id="mobileTitle"></h2>
-            <p id="mobileText"></p>
-        </div>
     </div>
 </main>
 <footer>
-    <a class="logoimg"><img src="assets/placeholder-logo.png"
-                            alt="currently esas uncanny valley face, later propper logo" width="100px"
-                            height="100px"></a>
+    <a class="logoimg" href="index.html"><img src="assets/placeholder-logo.png" alt="currently esas uncanny valley face, later propper logo" width="100px" height="100px"></a>
     <p>Author: Ara Westh</p>
     <p>© 2026 CharaCraft</p>
     <div class="footer-links">
@@ -201,9 +197,8 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </div>
-    <a href="mailto:arw01@edu.zealand.dk" alt="write a mail" target="_blank">Mail</a>
-    <a href="https://github.com/AraLikeTheBird/semesterproeve1alf" alt="link to github reporsatory" target="_blank">
-        GitHub</a>
+    <a href="mailto:arw01@edu.zealand.dk" target="_blank">Mail</a>
+    <a href="https://github.com/AraLikeTheBird/semesterproeve1alf" target="_blank"> GitHub</a>
 </footer>
 <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 <script src="creatorjs.js"></script>
