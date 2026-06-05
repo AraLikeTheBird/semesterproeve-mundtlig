@@ -85,6 +85,15 @@ const leftTitle = document.getElementById("leftTitle");
 const rightTitle = document.getElementById("rightTitle");
 const leftInfo = document.getElementById("leftInfo");
 const rightInfo = document.getElementById("rightInfo");
+const headLinkedLayers = [
+    "head-layer",
+    "physicaltraits-layer"
+];
+
+const bodyLinkedLayers = [
+    "body-layer",
+    "clothes-layer"
+];
 /* =========================
    CONFIG
 ========================= */
@@ -362,7 +371,47 @@ const layerAnchors = {
         anchorY: 0.85  // neck position (adjust if needed)
     }
 };
+function applyAvatarTransforms() {
 
+    const bodyW = proportions.body.width;
+    const bodyH = proportions.body.height;
+
+    const headW = proportions.head.width;
+    const headH = proportions.head.height;
+
+    /* =======================
+       BODY GROUP
+    ======================= */
+    bodyLinkedLayers.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        el.style.transform =
+            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+    });
+
+    /* =======================
+       HEAD GROUP
+    ======================= */
+    headLinkedLayers.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        el.style.transform =
+            `translateX(-50%) scale(${headW}, ${headH})`;
+    });
+
+    /* =======================
+       HEAD POSITION (anchored)
+    ======================= */
+    const head = document.getElementById("head-layer");
+
+    const baseOffset = 120;
+    const headOffset = baseOffset * bodyH;
+
+    head.style.transform =
+        `translateX(-50%) translateY(-${headOffset}px) scale(${headW}, ${headH})`;
+}
 document.querySelectorAll('input[type="range"]').forEach(slider => {
     slider.addEventListener("input", (e) => {
 
@@ -371,35 +420,7 @@ document.querySelectorAll('input[type="range"]').forEach(slider => {
 
         proportions[currentCategory][prop] = value;
 
-        const body = document.getElementById("body-layer");
-        const head = document.getElementById("head-layer");
-
-        const bodyW = proportions.body.width;
-        const bodyH = proportions.body.height;
-
-        const headW = proportions.head.width;
-        const headH = proportions.head.height;
-
-        /* =======================
-           BODY (base anchor)
-        ======================= */
-        body.style.transform =
-            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
-
-        /* =======================
-           HEAD (anchored to body)
-        ======================= */
-
-        const baseBodyHeight = 200;
-        // fixed reference value = prevents jumping
-
-        const bodyScaledHeight = baseBodyHeight * bodyH;
-
-        const headOffset =
-            bodyScaledHeight * (1 - layerAnchors.head.anchorY);
-
-        head.style.transform =
-            `translateX(-50%) translateY(-${headOffset}px) scale(${headW}, ${headH})`;
+        applyAvatarTransforms();
     });
 });
 
