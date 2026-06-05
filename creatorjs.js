@@ -354,6 +354,15 @@ function updateAvatarLayer(value) {
 /* =========================
    PROPORTIONS
 ========================= */
+const layerAnchors = {
+    body: {
+        anchorY: 1.0   // feet
+    },
+    head: {
+        anchorY: 0.85  // neck position (adjust if needed)
+    }
+};
+
 document.querySelectorAll('input[type="range"]').forEach(slider => {
     slider.addEventListener("input", (e) => {
 
@@ -371,11 +380,29 @@ document.querySelectorAll('input[type="range"]').forEach(slider => {
         const headW = proportions.head.width;
         const headH = proportions.head.height;
 
-        // KEEP centering transform + add scale
-        body.style.transform = `translateX(-50%) scale(${bodyW}, ${bodyH})`;
-        head.style.transform = `translateX(-50%) scale(${headW}, ${headH})`;
+        /* =======================
+           BODY (base anchor)
+        ======================= */
+        body.style.transform =
+            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+
+        /* =======================
+           HEAD (anchored to body)
+        ======================= */
+
+        const baseBodyHeight = 200;
+        // fixed reference value = prevents jumping
+
+        const bodyScaledHeight = baseBodyHeight * bodyH;
+
+        const headOffset =
+            bodyScaledHeight * (1 - layerAnchors.head.anchorY);
+
+        head.style.transform =
+            `translateX(-50%) translateY(-${headOffset}px) scale(${headW}, ${headH})`;
     });
 });
+
 
 
 /* =========================

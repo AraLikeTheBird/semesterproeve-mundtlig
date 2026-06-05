@@ -180,37 +180,9 @@ footer a img:hover{
     cursor: pointer;
 }
 /* AVATAR PREVIEW*/
-.preview {
-    position: relative;
-    width: 400px;
-    aspect-ratio: 1 / 1;
-    background: #FFE9D9;
-    flex-shrink: 0;
-    overflow: visible;
-}
-.preview img {
+/*.preview img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.preview {
-    position: relative;
-    width: 400px;
-    aspect-ratio: 1 / 1;
-    background: #FFE9D9;
-
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* 👈 key: shared base line */
-}
-.preview img {
-    position: absolute;
-    bottom: 0;              /* 👈 all layers share same baseline */
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 
@@ -219,15 +191,50 @@ footer a img:hover{
 
     object-fit: contain;
     pointer-events: none;
-}
-#body-layer {
-    z-index: 1;
-}
-#head-layer {
-    z-index: 2;
-    transform-origin: center bottom;
+} */
+.preview {
+    position: relative;
+    width: 400px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #FFE9D9;
 }
 
+/* CENTERING WRAPPER */
+.avatar-stack {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+/* BASE LAYERS */
+.avatar-stack img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+/* IMPORTANT: define a shared "ground point" system */
+#body-layer {
+    bottom: 0;
+    z-index: 1;
+}
+
+#head-layer {
+    bottom: 0;              /* SAME ANCHOR POINT */
+    z-index: 2;
+
+    transform-origin: center bottom;
+}
+#physicaltraits-layer {
+    z-index: 3;
+}
 /* OPTIONS GRID */
 .controls {
     flex: 1;
