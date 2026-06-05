@@ -8,7 +8,7 @@ html, body {
     margin: 0;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'atkinson hyperlegible', sans-serif;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -180,18 +180,6 @@ footer a img:hover{
     cursor: pointer;
 }
 /* AVATAR PREVIEW*/
-/*.preview img {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-    pointer-events: none;
-} */
 .preview {
     position: relative;
     width: 400px;
@@ -199,7 +187,6 @@ footer a img:hover{
     overflow: hidden;
     background-color: #FFE9D9;
 }
-
 /* CENTERING WRAPPER */
 .avatar-stack {
     position: absolute;
@@ -251,6 +238,7 @@ footer a img:hover{
     overflow-y:scroll;
     max-height: 150px;
     background-color: #FFF5ED;
+    font: inherit;         /* important */
 
 }
 .option:hover {
@@ -290,16 +278,33 @@ footer a img:hover{
 .option{
     border: 2px solid #A82F2F;
     background-color: #FFF5ED;
+    font-family: 'atkinson hyperlegible', sans-serif;
 }
 .mode{
     border: 2px solid #A82F2F;
     background-color: #FFF5ED;
+    font-family: 'atkinson-hyperlegible', sans-serif;
 }
 .cat{
     border: 1px solid #A82F2F;
     background-color: #FFF5ED;
+    font-family: 'atkinson hyperlegible', sans-serif;
 }
-
+.option:focus-visible {
+    outline: 2px solid #005C47;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+.mode:focus-visible {
+    outline: 2px solid #005C47;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+.cat:focus-visible {
+    outline: 2px solid #005C47;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
 /* responsive scale */
 @media (max-width: 768px) {
     .burgertoggle {

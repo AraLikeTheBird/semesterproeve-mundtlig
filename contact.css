@@ -8,7 +8,7 @@ html, body {
     margin: 0;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'atkinson hyperlegible', sans-serif;
     background-image: url("assets/placeholder.png");
     background-size: cover;
     background-position: center;

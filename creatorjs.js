@@ -313,19 +313,19 @@ document.querySelectorAll(".category-group button").forEach(btn => {
 document.querySelectorAll(".options").forEach(group => {
     group.addEventListener("click", (e) => {
 
-        if (!e.target.classList.contains("option")) return;
+        const option = e.target.closest(".option");
+        if (!option || !group.contains(option)) return;
 
         group.querySelectorAll(".option")
             .forEach(o => o.classList.remove("active"));
 
-        e.target.classList.add("active");
+        option.classList.add("active");
 
-        currentOption = e.target.dataset.value;
+        currentOption = option.dataset.value;
         savedOptions[currentCategory] = currentOption;
 
         updateAvatarLayer(currentOption);
 
-        // 🔥 THIS IS WHAT YOU WERE MISSING
         updateHeadings();
     });
 });
