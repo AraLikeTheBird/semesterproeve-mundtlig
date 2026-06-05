@@ -175,12 +175,13 @@ footer a:hover{
     color: #FFE9D9;
     text-decoration-color:#FFE9D9;
 }
+
+
 /* responsive scale */
 @media (max-width: 768px) {
     .burgertoggle {
         display: block;
     }
-
     .navlinks {
         display: none;
         flex-direction: column;
@@ -191,14 +192,17 @@ footer a:hover{
         width: 100%;
         padding: 20px;
     }
-
     .navlinks.active {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    .card{
+      margin: 5px;
+    }
     .layout {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
     }
     h2 {
         font-size: 1.5rem;
@@ -209,20 +213,29 @@ footer a:hover{
     .profile-image {
         width: 100px;
         height: 100px;
-        footer {
+    }
+
+
+    footer {
             padding: 20px;
             height: auto;   /* IMPORTANT */
             gap: 15px;
+            color: #FFE9D9;
         }
-
-        .footer-links {
+    .footer-links {
             flex-direction: column;
             align-items: center;
             gap: 10px;
+            color: #FFE9D9;
         }
-
-        footer a {
+    .footer-links a{
+        color: #FFE9D9;
+    }
+    footer a {
             display: block;
+            color: #FFE9D9;
         }
+    footer{
+        color: #FFE9D9;
     }
 }

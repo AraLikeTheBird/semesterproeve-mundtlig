@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/4-26&#10;00:47 am&#10;left to do: responsiveness on index, about and contact">
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/4-26&#10;00:47 am&#10;left to do: responsiveness on  about and contact">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780570979862</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="6/4-26&#10;00:47 am&#10;left to do: responsiveness on  about and contact">
+      <option name="closed" value="true" />
+      <created>1780571374091</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1780571374091</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +295,8 @@
     <MESSAGE value="6/2-2026&#10;11:40 AM&#10;&#10;save system for selected options (and all the bugs it made fixed)" />
     <MESSAGE value="6/4-26&#10;00:47 am&#10;responsiveness" />
     <MESSAGE value="6/4-26&#10;00:47 am&#10;left to do: responsiveness on index, about and contact" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/4-26&#10;00:47 am&#10;left to do: responsiveness on index, about and contact" />
+    <MESSAGE value="6/4-26&#10;00:47 am&#10;left to do: responsiveness on  about and contact" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/4-26&#10;00:47 am&#10;left to do: responsiveness on  about and contact" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

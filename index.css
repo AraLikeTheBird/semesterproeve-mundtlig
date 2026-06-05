@@ -244,11 +244,13 @@ footer a img:hover{
     /* LEFT becomes full width row 1 */
     .left {
         margin: 10px;
+        gap: 10px;
     }
 
     /* RIGHT becomes row 2 */
     .right {
         margin: 10px;
+        justify-content: center;
     }
     .right img {
         margin: 10px;
@@ -260,6 +262,7 @@ footer a img:hover{
     .tbox {
         max-height: 160px; /* smaller scroll areas */
         font-size: 14px;
+
     }
 
     .tbox .title {
@@ -274,6 +277,28 @@ footer a img:hover{
         width: 100%;
         height: auto;
         max-height: 300px;
+    }
+    footer {
+        padding: 20px;
+        height: auto;   /* IMPORTANT */
+        gap: 15px;
+        color: #FFE9D9;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: #FFE9D9;
+    }
+    .footer-links a{
+        color: #FFE9D9;
+    }
+    footer a {
+        display: block;
+        color: #FFE9D9;
+    }
+    footer{
+        color: #FFE9D9;
     }
 
 }
