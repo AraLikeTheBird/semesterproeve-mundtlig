@@ -77,6 +77,8 @@ let proportions = {
     body: { width: 1, height: 1 },
     head: { width: 1, height: 1 }
 };
+let currentBodyModel = "empty-default";
+let currentHeadModel = "start-image";
 
 /* =========================
    ELEMENTS
@@ -358,8 +360,55 @@ function updateAvatarLayer(value) {
     if (!img) return;
 
     img.src = `assets/${layerType}-${value}.png`;
+    // memory tracking
+    if (layerType === "body") {
+        currentBodyModel = value;
+    }
+
+    if (layerType === "head") {
+        currentHeadModel = value;
+    }
+
+    updateSilhouetteFit();
 }
 
+function updateSilhouetteFit() {
+
+    const clothesLayer = document.getElementById("clothes-layer");
+    const traitsLayer = document.getElementById("physicaltraits-layer");
+
+    // BODY-based fitting
+    if (clothesLayer) {
+
+        if (currentBodyModel === "round") {
+            clothesLayer.dataset.fit = "soft";
+        }
+
+        if (currentBodyModel === "square") {
+            clothesLayer.dataset.fit = "sharp";
+        }
+
+        if (currentBodyModel === "tall-Rectangle") {
+            clothesLayer.dataset.fit = "tall";
+        }
+    }
+
+    // HEAD-based fitting
+    if (traitsLayer) {
+
+        if (currentHeadModel === "round") {
+            traitsLayer.dataset.fit = "soft";
+        }
+
+        if (currentHeadModel === "square") {
+            traitsLayer.dataset.fit = "sharp";
+        }
+
+        if (currentHeadModel === "tall-Rectangle") {
+            traitsLayer.dataset.fit = "tall";
+        }
+    }
+}
 /* =========================
    PROPORTIONS
 ========================= */

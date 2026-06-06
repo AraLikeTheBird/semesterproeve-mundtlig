@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/5-26&#10;11:10pm PM&#10;forgot to add the scaling for sillhuette.&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell.">
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/6-26&#10;00:00 am&#10;added new font&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creatorjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/creatorjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +126,8 @@
       <workItem from="1779538224633" duration="1392000" />
       <workItem from="1779540298514" duration="17972000" />
       <workItem from="1779718026747" duration="54274000" />
-      <workItem from="1780694061596" duration="2467000" />
+      <workItem from="1780694061596" duration="2724000" />
+      <workItem from="1780751809077" duration="2110000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -291,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780693884313</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="6/6-26&#10;00:00 am&#10;added new font&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell.">
+      <option name="closed" value="true" />
+      <created>1780696795151</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1780696795151</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +330,8 @@
     <MESSAGE value="6/4-26&#10;00:47 am&#10;left to do: responsiveness on  about and contact" />
     <MESSAGE value="6/4-26&#10;04:23 PM&#10;i think im ready for png production. its gotta wait till 2nite or tmr" />
     <MESSAGE value="6/5-26&#10;11:10pm PM&#10;forgot to add the scaling for sillhuette.&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell." />
-    <option name="LAST_COMMIT_MESSAGE" value="6/5-26&#10;11:10pm PM&#10;forgot to add the scaling for sillhuette.&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell." />
+    <MESSAGE value="6/6-26&#10;00:00 am&#10;added new font&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell." />
+    <option name="LAST_COMMIT_MESSAGE" value="6/6-26&#10;00:00 am&#10;added new font&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
