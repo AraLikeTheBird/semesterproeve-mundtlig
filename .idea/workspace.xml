@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/6-26&#10;21.52 pm&#10;save point">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/head-round.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/head-round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creatorjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/creatorjs.js" afterDir="false" />
-    </list>
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/6-26&#10;21.52 pmdone trying to fix the head issue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +124,7 @@
       <workItem from="1779718026747" duration="54274000" />
       <workItem from="1780694061596" duration="2724000" />
       <workItem from="1780751809077" duration="2201000" />
-      <workItem from="1780766068767" duration="7243000" />
+      <workItem from="1780766068767" duration="7383000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -315,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780773707953</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="6/6-26&#10;21.52 pmdone trying to fix the head issue">
+      <option name="closed" value="true" />
+      <created>1780781441667</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1780781441667</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +354,8 @@
     <MESSAGE value="6/6-26&#10;00:00 am&#10;added new font&#10;i think im ready for png production. its gotta wait till  tmr. hopefully that will fix any ong issues aswell." />
     <MESSAGE value="6/6-26&#10;03.52 pm&#10;fixed sillhuette to body compatability. might have to remove some of the options tho.." />
     <MESSAGE value="6/6-26&#10;21.52 pm&#10;save point" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/6-26&#10;21.52 pm&#10;save point" />
+    <MESSAGE value="6/6-26&#10;21.52 pmdone trying to fix the head issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/6-26&#10;21.52 pmdone trying to fix the head issue" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
