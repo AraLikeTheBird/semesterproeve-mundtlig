@@ -420,46 +420,43 @@ const layerAnchors = {
         anchorY: 0.85  // neck position (adjust if needed)
     }
 };
-function applyAvatarTransforms() {
+const BASE_HEAD_Y = 2;
 
+function applyAvatarTransforms() {
     const bodyW = proportions.body.width;
     const bodyH = proportions.body.height;
 
     const headW = proportions.head.width;
     const headH = proportions.head.height;
 
-    /* =======================
-       BODY GROUP
-    ======================= */
-    bodyLinkedLayers.forEach(id => {
-        const el = document.getElementById(id);
-        if (!el) return;
-
-        el.style.transform =
-            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
-    });
-
-    /* =======================
-       HEAD GROUP
-    ======================= */
-    headLinkedLayers.forEach(id => {
-        const el = document.getElementById(id);
-        if (!el) return;
-
-        el.style.transform =
-            `translateX(-50%) scale(${headW}, ${headH})`;
-    });
-
-    /* =======================
-       HEAD POSITION (anchored)
-    ======================= */
+    const body = document.getElementById("body-layer");
     const head = document.getElementById("head-layer");
+    const traits = document.getElementById("physicaltraits-layer");
+    const clothes = document.getElementById("clothes-layer");
 
-    const baseOffset = 120;
-    const headOffset = baseOffset * bodyH;
+    // ======================
+    // BODY (anchored bottom)
+    // ======================
+    if (body) {
+        body.style.transform =
+            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+    }
 
-    head.style.transform =
+    if (clothes) {
+        clothes.style.transform =
+            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+    }
+
+    // ======================
+    // HEAD (anchored bottom + corrected neck offset)
+    // ======================
+    const headOffset = BASE_HEAD_Y * headH;
+
+    const headTransform =
         `translateX(-50%) translateY(-${headOffset}px) scale(${headW}, ${headH})`;
+
+    if (head) head.style.transform = headTransform;
+    if (traits) traits.style.transform = headTransform;
 }
 document.querySelectorAll('input[type="range"]').forEach(slider => {
     slider.addEventListener("input", (e) => {

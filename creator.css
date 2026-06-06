@@ -201,27 +201,13 @@ footer a img:hover{
 .avatar-stack img {
     position: absolute;
     left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
     width: 100%;
     height: auto;
     pointer-events: none;
 }
 
-/* IMPORTANT: define a shared "ground point" system */
-#body-layer {
-    bottom: 0;
-    z-index: 1;
-}
-
-#head-layer {
-    bottom: 0;              /* SAME ANCHOR POINT */
-    z-index: 2;
-
-    transform-origin: center bottom;
-}
-#physicaltraits-layer {
-    z-index: 3;
-}
 /* OPTIONS GRID */
 .controls {
     flex: 1;
@@ -305,6 +291,8 @@ footer a img:hover{
     outline-offset: 2px;
     border-radius: 4px;
 }
+#head-layer { outline: 2px solid red; }
+#body-layer { outline: 2px solid blue; }
 /* responsive scale */
 @media (max-width: 768px) {
     .burgertoggle {
