@@ -79,6 +79,16 @@ let proportions = {
 };
 let currentBodyModel = "empty-default";
 let currentHeadModel = "start-image";
+const clothingMap = {
+    shirts: {
+        "wide-crop-top": true,
+        "loose-wrap-shirt": true
+    },
+    pants: {
+        "wide-pants": true,
+        "wide-shorts": true
+    }
+};
 
 /* =========================
    ELEMENTS
@@ -347,29 +357,46 @@ function switchOptions() {
         setDefaultOption();
     });
 }
+function resolveClothingFit(category, value) {
+
+    const bodyShape = currentBodyModel; // round / square / tall
+
+    // only apply fitting for clothing categories
+    if (!clothingMap[category]) {
+        return value;
+    }
+
+    const path = `assets/${category}/${value}-${bodyShape}.png`;
+
+    return path;
+}
 /* =========================
    AVATAR UPDATE
 ========================= */
 function updateAvatarLayer(value) {
-    console.log("CATEGORY:", currentCategory, "VALUE:", value);
     const layerType = currentCategory;
-
     const img = document.getElementById(`${layerType}-layer`);
 
-    console.log("trying to find image:", img);
     if (!img) return;
 
-    img.src = `assets/${layerType}-${value}.png`;
-    // memory tracking
-    if (layerType === "body") {
-        currentBodyModel = value;
-    }
+    const shape = currentBodyModel; // round / square / tall-Rectangle
 
-    if (layerType === "head") {
-        currentHeadModel = value;
-    }
+    const path = `assets/${layerType}/${layerType}-${value}-${shape}.png`;
 
-    updateSilhouetteFit();
+    console.log("LOADING:", path);
+
+    img.onerror = () => {
+        console.warn("Missing image, falling back:", path);
+
+        // fallback to non-shaped version
+        img.src = `assets/${layerType}/${layerType}-${value}.png`;
+    };
+
+    img.src = path;
+
+    // track state
+    if (layerType === "body") currentBodyModel = value;
+    if (layerType === "head") currentHeadModel = value;
 }
 
 function updateSilhouetteFit() {
@@ -412,51 +439,53 @@ function updateSilhouetteFit() {
 /* =========================
    PROPORTIONS
 ========================= */
-const layerAnchors = {
-    body: {
-        anchorY: 1.0   // feet
-    },
-    head: {
-        anchorY: 0.85  // neck position (adjust if needed)
-    }
-};
-const BASE_HEAD_Y = 2;
 
+function getBodyScale() {
+    return {
+        w: proportions.body.width,
+        h: proportions.body.height
+    };
+}
 function applyAvatarTransforms() {
+
+    const body = document.getElementById("body-layer");
+    const head = document.getElementById("head-layer");
+    const traits = document.getElementById("physicaltraits-layer");
+
+    const shirts = document.getElementById("shirts-layer");
+    const pants = document.getElementById("pants-layer");
+    const overclothes = document.getElementById("overclothes-layer");
+
     const bodyW = proportions.body.width;
     const bodyH = proportions.body.height;
 
     const headW = proportions.head.width;
     const headH = proportions.head.height;
 
-    const body = document.getElementById("body-layer");
-    const head = document.getElementById("head-layer");
-    const traits = document.getElementById("physicaltraits-layer");
-    const clothes = document.getElementById("clothes-layer");
+    // ======================
+    // MASTER BODY SCALE
+    // ======================
+    const bodyTransform = `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+
+    if (body) body.style.transform = bodyTransform;
+
+    // 👇 EVERYTHING CLOTHING COPIES BODY EXACTLY
+    if (shirts) shirts.style.transform = bodyTransform;
+    if (pants) pants.style.transform = bodyTransform;
+    if (overclothes) overclothes.style.transform = bodyTransform;
 
     // ======================
-    // BODY (anchored bottom)
+    // HEAD (separate rig)
     // ======================
-    if (body) {
-        body.style.transform =
-            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+    if (head) {
+        head.style.transform =
+            `translateX(-50%) scale(${headW}, ${headH})`;
     }
 
-    if (clothes) {
-        clothes.style.transform =
-            `translateX(-50%) scale(${bodyW}, ${bodyH})`;
+    if (traits) {
+        traits.style.transform =
+            `translateX(-50%) scale(${headW}, ${headH})`;
     }
-
-    // ======================
-    // HEAD (anchored bottom + corrected neck offset)
-    // ======================
-    const headOffset = BASE_HEAD_Y * headH;
-
-    const headTransform =
-        `translateX(-50%) translateY(-${headOffset}px) scale(${headW}, ${headH})`;
-
-    if (head) head.style.transform = headTransform;
-    if (traits) traits.style.transform = headTransform;
 }
 document.querySelectorAll('input[type="range"]').forEach(slider => {
     slider.addEventListener("input", (e) => {
