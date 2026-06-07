@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/7-26&#10;08:58 pm&#10;killed some darleks, added some stuff" />
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/7-26&#10;08:58 pm&#10;killed some darleks, added some stuff">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/semesterprøve character.psd" beforeDir="false" afterPath="$PROJECT_DIR$/assets/semesterprøve character.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +80,7 @@
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "option-variance",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/helen/PhpstormProjects/semesterproeve1alf/assets/shape/bodies",
     "list.type.of.created.stylesheet": "CSS",
