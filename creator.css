@@ -13,7 +13,7 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    min-height: 145vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
 
 }
@@ -329,52 +329,35 @@ footer a img:hover{
         align-items: center;
         z-index: 11;
     }
-    /* turn layout into 2 columns: info | creator */
-    .app {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* hide right panel completely */
-    .right,.left {
-        grid-area: info;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* creator takes right side */
 
 
-    /* optional: make left panel look like stacked cards */
     .left h2,
     .left p {
         margin-bottom: 10px;
     }
     .app {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        height: auto;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .left {
-        grid-column: 1;
-        grid-row: 3;
-        width: 86%;
+    .left,
+    .right,
+    .creator {
+        width: 100%;
+        max-width: 500px;
     }
+.left{
+    order: 2;
+}
 
-    .right {
-        grid-column: 1;
-        grid-row: 2;
-        width: 86%;
-    }
-    .creator{
-        grid-column: 1;
-        grid-row: 1;
-        width: 86%;
-    }
+.creator{
+    order: 1
+}
+
+.right{
+    order: 3;
+}
 
     footer {
         padding: 20px;
@@ -398,6 +381,23 @@ footer a img:hover{
     footer{
         color: #FFE9D9;
     }
+
+}
+
+@media (max-width: 420px) {
+    .options:not(.prop){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .preview {
+        width: min(400px, 100%);
+    }
+    .prop{
+      width:min(400px, 100%);
+    }
+    .category-group{
+        width: min(400px, 100%);
+    }
+
 
 }
 

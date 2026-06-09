@@ -182,10 +182,11 @@ function updateHeadings(activeProp = null) {
             : "proportions";
 
         rightTitle.textContent =
-            `Adjusting ${formatText(currentCategory)} ${propName}`;
+            `Adjust Proportions`;
 
         rightInfo.textContent =
-            `Head and body width and height shape perceived personality and presence. Wider forms feel stable, grounded, and strong, while taller or narrower proportions suggest elegance, tension, fragility, or heightened expressiveness.`;
+            `Head and body width and height shape perceived personality and presence. Wider forms feel stable, grounded, 
+            and strong, while taller or narrower proportions suggest elegance, tension, fragility, or heightened expressiveness.`;
 
 
         return;
