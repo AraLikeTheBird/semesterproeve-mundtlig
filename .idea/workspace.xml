@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/8-26&#10;03:39&#10;fixed som css and placeholders">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/head/head-start-image-empty-default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/placeholder-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/placeholder-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/placeholder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/semesterprøve character.psd" beforeDir="false" afterPath="$PROJECT_DIR$/assets/semesterprøve character.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/video-placeholder.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/assets/video-placeholder.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creatorjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/creatorjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/9-26&#10;03:39&#10;last code fix before hand in" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,6 +133,7 @@
       <workItem from="1780847768764" duration="8180000" />
       <workItem from="1780895759977" duration="1921000" />
       <workItem from="1780902794189" duration="11203000" />
+      <workItem from="1780983727331" duration="898000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -366,7 +351,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780860899266</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="6/9-26&#10;03:39&#10;last code fix before hand in">
+      <option name="closed" value="true" />
+      <created>1780984015515</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1780984015515</updated>
+    </task>
+    <task id="LOCAL-00029" summary="6/9-26&#10;03:39&#10;last code fix before hand in">
+      <option name="closed" value="true" />
+      <created>1780984022811</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1780984022811</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +406,8 @@
     <MESSAGE value="6/6-26&#10;21.52 pmdone trying to fix the head issue" />
     <MESSAGE value="6/7-26&#10;00:31 am&#10;kill your darleks" />
     <MESSAGE value="6/7-26&#10;08:58 pm&#10;killed some darleks, added some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/7-26&#10;08:58 pm&#10;killed some darleks, added some stuff" />
+    <MESSAGE value="6/9-26&#10;03:39&#10;last code fix before hand in" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/9-26&#10;03:39&#10;last code fix before hand in" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
