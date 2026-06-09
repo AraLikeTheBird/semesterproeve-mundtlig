@@ -3,19 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
-    margin: 0;
 }
+
 body {
-    font-family: 'atkinson hyperlegible', sans-serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    min-height: 100dvh; /* FIX for iPhone viewport bug */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
-    background-repeat: no-repeat;
-
+    overflow-x: hidden; /* prevents iPhone horizontal scroll */
 }
 nav {
     background-color: #A82F2F;
@@ -137,7 +138,7 @@ footer a img:hover{
 .app {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 100vh;
+    min-height: 100dvh;
     align-items: start;
     background-color: #FFE9D9;
     padding: 10px;
@@ -192,20 +193,17 @@ footer a img:hover{
 .avatar-stack {
     position: absolute;
     inset: 0;
+    z-index: 0;
 }
 
-/* all layers share SAME anchor point */
 .avatar-stack img {
     position: absolute;
     left: 50%;
     bottom: 0;
-
     transform: translateX(-50%);
     transform-origin: bottom center;
-
     width: 100%;
     height: auto;
-
     pointer-events: none;
 }
 #physicaltraits-layer{
@@ -329,35 +327,36 @@ footer a img:hover{
         align-items: center;
         z-index: 11;
     }
-
-
-    .left h2,
-    .left p {
-        margin-bottom: 10px;
-    }
-    .app {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left,
-    .right,
-    .creator {
+        .app {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    .preview {
+        position: relative;
         width: 100%;
-        max-width: 500px;
+        max-width: 400px;   /* safe cap */
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background-color: #FFE9D9;
     }
-    .left{
-        order: 2;
-    }
+        .left,
+        .right,
+        .creator {
+            width: 100%;
+            max-width: 500px;
+        }
 
-    .creator{
-        order: 1
-    }
+        .left { order: 2; }
+        .creator { order: 1; }
+        .right { order: 3; }
 
-    .right{
-        order: 3;
-    }
+        /* IMPORTANT: prevents overflow from panels */
+        .panel {
+            width: 100%;
+        }
+
 
     footer {
         padding: 20px;
@@ -385,23 +384,18 @@ footer a img:hover{
 }
 
 @media (max-width: 420px) {
-    .options:not(.prop){
+    .preview {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .options {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .preview {
-        width: min(400px, 100%);
-    }
-    .prop{
-        max-width: 300px;
-    }
-    .category-group{
-        max-width: 300px;
-    }
+
     .app {
-        display: flex;
-        flex-direction: column;
-        height: auto;
         min-height: 100dvh;
+        height: auto;
     }
 
 }

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="at this point weird responsive shiz">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
-    </list>
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="it all broke???" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +135,7 @@
       <workItem from="1780902794189" duration="11203000" />
       <workItem from="1780983727331" duration="941000" />
       <workItem from="1780988247663" duration="1389000" />
-      <workItem from="1781008434419" duration="5835000" />
+      <workItem from="1781008434419" duration="6226000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -404,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781035730732</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="it all broke???">
+      <option name="closed" value="true" />
+      <created>1781036598391</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1781036598391</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +427,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started adding text content" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes front page" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now" />
@@ -447,7 +451,8 @@
     <MESSAGE value="6/9-26&#10;09:18 am&#10;forgot to fill in placeholder text" />
     <MESSAGE value="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css" />
     <MESSAGE value="at this point weird responsive shiz" />
-    <option name="LAST_COMMIT_MESSAGE" value="at this point weird responsive shiz" />
+    <MESSAGE value="it all broke???" />
+    <option name="LAST_COMMIT_MESSAGE" value="it all broke???" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
