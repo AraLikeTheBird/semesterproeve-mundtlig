@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/9-26&#10;03:39&#10;last code fix before hand in" />
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/9-26&#10;08:18 am&#10;last code fix before hand in">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +138,8 @@
       <workItem from="1780847768764" duration="8180000" />
       <workItem from="1780895759977" duration="1921000" />
       <workItem from="1780902794189" duration="11203000" />
-      <workItem from="1780983727331" duration="898000" />
+      <workItem from="1780983727331" duration="941000" />
+      <workItem from="1780988247663" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -367,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780984022811</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="6/9-26&#10;08:18 am&#10;last code fix before hand in">
+      <option name="closed" value="true" />
+      <created>1780985923846</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1780985923846</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +421,8 @@
     <MESSAGE value="6/7-26&#10;00:31 am&#10;kill your darleks" />
     <MESSAGE value="6/7-26&#10;08:58 pm&#10;killed some darleks, added some stuff" />
     <MESSAGE value="6/9-26&#10;03:39&#10;last code fix before hand in" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/9-26&#10;03:39&#10;last code fix before hand in" />
+    <MESSAGE value="6/9-26&#10;08:18 am&#10;last code fix before hand in" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/9-26&#10;08:18 am&#10;last code fix before hand in" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
