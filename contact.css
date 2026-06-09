@@ -184,6 +184,7 @@ main a:visited:hover{
 @media (max-width: 768px) {
     body {
         background-position: top center;
+        background-size: 10dvh;
     }
     .burgertoggle {
         display: block;
@@ -246,3 +247,4 @@ main a:visited:hover{
         color: #FFE9D9;
     }
 }
+

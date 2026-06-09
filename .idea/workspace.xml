@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css">
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="solved?">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/contact.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -395,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781009781639</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="solved?">
+      <option name="closed" value="true" />
+      <created>1781037682430</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1781037682430</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +423,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nav bar for index" />
     <MESSAGE value="started adding text content" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes front page" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help" />
@@ -438,7 +447,8 @@
     <MESSAGE value="6/9-26&#10;08:18 am&#10;last code fix before hand in" />
     <MESSAGE value="6/9-26&#10;09:18 am&#10;forgot to fill in placeholder text" />
     <MESSAGE value="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css" />
+    <MESSAGE value="solved?" />
+    <option name="LAST_COMMIT_MESSAGE" value="solved?" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
