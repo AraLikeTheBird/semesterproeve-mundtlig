@@ -13,7 +13,7 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100svh;
     background-repeat: no-repeat;
 
 }
@@ -347,17 +347,17 @@ footer a img:hover{
         width: 100%;
         max-width: 500px;
     }
-.left{
-    order: 2;
-}
+    .left{
+        order: 2;
+    }
 
-.creator{
-    order: 1
-}
+    .creator{
+        order: 1
+    }
 
-.right{
-    order: 3;
-}
+    .right{
+        order: 3;
+    }
 
     footer {
         padding: 20px;
@@ -392,13 +392,16 @@ footer a img:hover{
         width: min(400px, 100%);
     }
     .prop{
-      width:min(400px, 100%);
+        max-width: 300px;
     }
     .category-group{
-        width: min(400px, 100%);
+        max-width: 300px;
+    }
+    .app {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100dvh;
     }
 
-
 }
-
-

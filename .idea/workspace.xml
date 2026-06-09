@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="at this point weird responsive shiz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creatorjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/creatorjs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +138,7 @@
       <workItem from="1780902794189" duration="11203000" />
       <workItem from="1780983727331" duration="941000" />
       <workItem from="1780988247663" duration="1389000" />
-      <workItem from="1781008434419" duration="5014000" />
+      <workItem from="1781008434419" duration="5835000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -399,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781009781639</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="at this point weird responsive shiz">
+      <option name="closed" value="true" />
+      <created>1781035730732</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1781035730732</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nav bar for index" />
     <MESSAGE value="started adding text content" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes front page" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help" />
@@ -442,7 +446,8 @@
     <MESSAGE value="6/9-26&#10;08:18 am&#10;last code fix before hand in" />
     <MESSAGE value="6/9-26&#10;09:18 am&#10;forgot to fill in placeholder text" />
     <MESSAGE value="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css" />
+    <MESSAGE value="at this point weird responsive shiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="at this point weird responsive shiz" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
