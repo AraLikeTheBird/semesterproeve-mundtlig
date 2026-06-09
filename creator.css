@@ -384,13 +384,20 @@ footer a img:hover{
 }
 
 @media (max-width: 420px) {
-    .preview {
-        width: 100%;
-        max-width: 300px;
+    .options {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
     }
 
-    .options {
-        grid-template-columns: 1fr 1fr 1fr;
+    /* sliders stay clean column layout */
+    .options.prop {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+    }
+
+    .preview {
+        width: min(100%, 300px);
     }
 
     .app {
