@@ -389,15 +389,17 @@ footer a img:hover{
         grid-template-columns: 1fr 1fr 1fr;
     }
     .preview {
-        width: min(400px, 100%);
+        width: 40dvh;
     }
     .prop{
-      width:min(400px, 100%);
+      width: 40dvh;
     }
     .category-group{
-        width: min(400px, 100%);
+        width: 40dvh;
     }
-
+.app{
+    max-width: 100dvh;
+}
 
 }
 
