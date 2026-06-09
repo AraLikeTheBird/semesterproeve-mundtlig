@@ -312,7 +312,6 @@ footer a img:hover{
     .burgertoggle {
         display: block;
     }
-
     .navlinks {
         display: none;
         flex-direction: column;
@@ -324,7 +323,6 @@ footer a img:hover{
         padding: 20px;
         z-index: 10;
     }
-
     .navlinks.active {
         display: flex;
         flex-direction: column;
@@ -333,12 +331,8 @@ footer a img:hover{
     }
     /* turn layout into 2 columns: info | creator */
     .app {
-        grid-template-columns: 1fr 1.2fr;
-        grid-template-areas:
-            "info creator"
-            "info creator";
-        height: auto;
-        gap: 2px;
+        display: flex;
+        flex-direction: column;
     }
 
     /* hide right panel completely */
@@ -350,9 +344,7 @@ footer a img:hover{
     }
 
     /* creator takes right side */
-    .creator {
-        grid-area: creator;
-    }
+
 
     /* optional: make left panel look like stacked cards */
     .left h2,
@@ -361,29 +353,29 @@ footer a img:hover{
     }
     .app {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
         height: auto;
+        justify-items: center;
     }
 
     .left {
-        display: block;
         grid-column: 1;
-        grid-row: 1;
+        grid-row: 3;
+        width: 86%;
     }
 
     .right {
-        display: block;
         grid-column: 1;
         grid-row: 2;
+        width: 86%;
+    }
+    .creator{
+        grid-column: 1;
+        grid-row: 1;
+        width: 86%;
     }
 
-    .creator {
-        display: block;
-        grid-column: 2;
-        grid-row: 1 / span 2;
-        height: auto;
-    }
     footer {
         padding: 20px;
         height: auto;   /* IMPORTANT */

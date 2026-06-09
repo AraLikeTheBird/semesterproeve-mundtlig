@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/9-26&#10;08:18 am&#10;last code fix before hand in">
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="6/9-26&#10;09:18 am&#10;forgot to fill in placeholder text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +137,8 @@
       <workItem from="1780895759977" duration="1921000" />
       <workItem from="1780902794189" duration="11203000" />
       <workItem from="1780983727331" duration="941000" />
-      <workItem from="1780988247663" duration="1175000" />
+      <workItem from="1780988247663" duration="1389000" />
+      <workItem from="1781008434419" duration="1248000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -381,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780985923846</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="6/9-26&#10;09:18 am&#10;forgot to fill in placeholder text">
+      <option name="closed" value="true" />
+      <created>1780989612770</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1780989612770</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +429,8 @@
     <MESSAGE value="6/7-26&#10;08:58 pm&#10;killed some darleks, added some stuff" />
     <MESSAGE value="6/9-26&#10;03:39&#10;last code fix before hand in" />
     <MESSAGE value="6/9-26&#10;08:18 am&#10;last code fix before hand in" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/9-26&#10;08:18 am&#10;last code fix before hand in" />
+    <MESSAGE value="6/9-26&#10;09:18 am&#10;forgot to fill in placeholder text" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/9-26&#10;09:18 am&#10;forgot to fill in placeholder text" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
