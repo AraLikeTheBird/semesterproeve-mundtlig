@@ -15,7 +15,7 @@ body {
     min-height: 130vh
 }
 nav {
-    background-color: #380f00;
+    background-color: #A82F2F;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +40,7 @@ nav {
     justify-content: center;
 }
 .navlinks a {
-    color: #0affcf;
+    color: #ffe9d9;
     text-decoration: none;
     font-size: 35px;
     display:inline-block;
@@ -48,14 +48,14 @@ nav {
     margin-right: 23px;
 }
 .navlinks a:hover {
-    color: #a82f2f;
+    color: #0AFFCF;
     transform: scale(0.85);
 }
 /* burger */
 .burgertoggle {
     display: none;
     font-size: 28px;
-    color: #0affcf;
+    color: #ffe9d9;
     cursor: pointer;
 }
 main{
@@ -144,6 +144,21 @@ main{
     cursor: pointer;
     object-fit: cover;
 }
+.trybtn img {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+}
+.playbtn {
+    flex: 1;                  /* takes remaining space */
+    display: flex;
+    justify-content: center;  /* vertical centering inside area */
+    align-items: center;      /* horizontal centering */
+    transition: transform 0.6s ease;
+}
+.playbtn:hover{
+    transform: scale(0.85);
+}
 /*format of text elements*/
 .title{
     font-size:25px;
@@ -206,7 +221,7 @@ footer a img:hover{
     .navlinks {
         display: none;
         flex-direction: column;
-        background-color: #380f00;
+        background-color: #A82F2F;
         position: absolute;
         top: 100%;
         left: 0;
@@ -250,14 +265,19 @@ footer a img:hover{
     /* RIGHT becomes row 2 */
     .right {
         margin: 10px;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .right img {
         margin: 10px;
         align-items: center; /* prevents weird centering shrink */
-        width: 100%;
     }
-
+    .trybtn img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
     /* reduce spacing between blocks */
     .tbox {
         max-height: 160px; /* smaller scroll areas */

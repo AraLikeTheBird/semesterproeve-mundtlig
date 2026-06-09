@@ -19,7 +19,7 @@ body {
 
 }
 nav {
-    background-color: #380f00;
+    background-color: #A82F2F;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +44,7 @@ nav {
     justify-content: center;
 }
 .navlinks a {
-    color: #0affcf;
+    color: #ffe9d9;
     text-decoration: none;
     font-size: 35px;
     display:inline-block;
@@ -52,14 +52,14 @@ nav {
     margin-right: 23px;
 }
 .navlinks a:hover {
-    color: #a82f2f;
+    color: #0AFFCF;
     transform: scale(0.85);
 }
 /* burger */
 .burgertoggle {
     display: none;
     font-size: 28px;
-    color: #0affcf;
+    color: #ffe9d9;
     cursor: pointer;
 }
 /*quick scroll*/
@@ -191,7 +191,7 @@ main a:visited:hover{
     .navlinks {
         display: none;
         flex-direction: column;
-        background-color: #380f00;
+        background-color: #A82F2F;
         position: absolute;
         top: 100%;
         left: 0;

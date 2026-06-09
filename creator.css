@@ -18,7 +18,7 @@ body {
 
 }
 nav {
-    background-color: #380f00;
+    background-color: #A82F2F;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@ nav {
     justify-content: center;
 }
 .navlinks a {
-    color: #0affcf;
+    color: #ffe9d9;
     text-decoration: none;
     font-size: 35px;
     display:inline-block;
@@ -51,14 +51,14 @@ nav {
     margin-right: 23px;
 }
 .navlinks a:hover {
-    color: #a82f2f;
+    color: #0AFFCF;
     transform: scale(0.85);
 }
 /* burger */
 .burgertoggle {
     display: none;
     font-size: 28px;
-    color: #0affcf;
+    color: #ffe9d9;
     cursor: pointer;
 }
 /*quick scroll*/
@@ -303,7 +303,10 @@ footer a img:hover{
     outline-offset: 2px;
     border-radius: 4px;
 }
-
+.nd{
+    background-color: #A82F2F;
+    color: #FC6735;
+}
 /* responsive scale */
 @media (max-width: 768px) {
     .burgertoggle {
@@ -313,18 +316,20 @@ footer a img:hover{
     .navlinks {
         display: none;
         flex-direction: column;
-        background-color: #380f00;
+        background-color: #A82F2F;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         padding: 20px;
+        z-index: 10;
     }
 
     .navlinks.active {
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: 11;
     }
     /* turn layout into 2 columns: info | creator */
     .app {

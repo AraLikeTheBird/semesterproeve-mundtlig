@@ -110,16 +110,21 @@ const bodyLinkedLayers = [
    CONFIG
 ========================= */
 const optionDescriptions = {
-    "pointed-ears": "Sharp, animal-like ears that enhance expressive silhouette.",
-    "human-ears": "Standard human ear shape with neutral proportions.",
-    "canine/cat-ears": "Animal-inspired ears that change overall character style.",
-    "grazer-ears": "Broad, soft ear shapes inspired by grazing animals.",
+    "round": "Round shapes create a friendly, soft, and approachable impression. In shape language, they are often used for kind, gentle, playful, or trustworthy characters because their smooth curves feel safe and welcoming.",
+    "tall-Rectangle": "Tall rectangular shapes suggest structure, formality, and upward movement. They often imply discipline, authority, or elegance, with a composed but slightly rigid or distant presence.",
+    "square": "Square shapes suggest stability, strength, and grounded personality. A square head or body often reads as solid, reliable, and emotionally steady, sometimes even stubborn or unchanging.",
+    "Triangle":"A downward triangle body or head suggests instability, tension, or vulnerability. It creates a top-heavy imbalance, often reading as anxious, sharp, or emotionally intense in character design.",
 
-    "bob-hair": "Short, rounded haircut framing the face.",
-    "slick-back": "Hair pulled tightly back for a clean silhouette.",
-    "half-updo": "Hair partially tied back while keeping volume.",
-    "messy-bun": "Loose bun with irregular strands for a casual look.",
-    "long-loose-hair": "Extended hair length with natural flow."
+    "pointed-ears": "Elven ears sharpen a character’s silhouette and add a sense of fantasy or otherness. They often signal heightened sensitivity, elegance, or connection to nature, subtly shifting perception toward non-human traits.",
+    "human-ears": "Standard human ears create a neutral, familiar silhouette that feels grounded and realistic. They reduce stylization, making the character more relatable, understated, and less visually expressive than animal or exaggerated ear forms.",
+    "bob-hair": "A bob haircut creates a clean, rounded silhouette with clear facial framing. In flat black, it reads as structured and youthful, emphasizing head shape, symmetry, and sharp readability of expression. it can also read as helmet-y, depending on the character",
+    "messy-bun": "A messy bun softens the silhouette, breaking clean outlines and adding irregular volume at the head. It suggests casualness, spontaneity, and looseness, making the character feel relaxed and slightly unpolished.",
+    "long-loose-hair": "Long loose hair creates a flowing, organic silhouette that softens the character’s outline. In a flat black form, it suggests movement, freedom, calmness, and a slightly untamed or natural presence.",
+
+    "wide-crop-top": "A wide crop top expands the upper silhouette, creating a broader, more relaxed shape. In flat black, it reads as casual, open, slightly playful, and visually weighty across the shoulders and torso.",
+    "loose-wrap-shirt": "A loose wrap shirt softens the silhouette, breaking rigid structure into flowing, irregular shapes. It suggests ease, flexibility, and movement, reducing sharpness and creating a more relaxed, layered visual expression.",
+
+
 };
 const modeDefaults = {
     shape: "head",
@@ -180,7 +185,7 @@ function updateHeadings(activeProp = null) {
             `Adjusting ${formatText(currentCategory)} ${propName}`;
 
         rightInfo.textContent =
-            `Use the sliders to adjust ${propName} of the ${currentCategory}.`;
+            `Head and body width and height shape perceived personality and presence. Wider forms feel stable, grounded, and strong, while taller or narrower proportions suggest elegance, tension, fragility, or heightened expressiveness.`;
 
 
         return;
@@ -379,7 +384,12 @@ function updateAvatarLayer(value) {
 
     if (!img) return;
 
-    const shape = currentBodyModel; // round / square / tall-Rectangle
+    let shape;
+    if (bodyOrHead(value) === 'head') {
+        shape = currentHeadModel;
+    } else {
+        shape = currentBodyModel; // round / square / tall-Rectangle
+    }
 
     const path = `assets/${layerType}/${layerType}-${value}-${shape}.png`;
 
@@ -397,6 +407,30 @@ function updateAvatarLayer(value) {
     // track state
     if (layerType === "body") currentBodyModel = value;
     if (layerType === "head") currentHeadModel = value;
+}
+
+function bodyOrHead(value) {
+    switch (value) {
+        case "pointed-ears":
+        case "human-ears":
+        case "bob-hair":
+        case "bun":
+        case "loose-hair":
+            return "head";
+        case "loose-skirt":
+        case "wide-shorts":
+        case "wide-pants":
+        case "bolero-jacket":
+        case "trench-coat":
+        case "cape":
+        case "scarf":
+        case "flannel":
+        case "wide-crop-top":
+        case "loose-wrap-shirt":
+            return "body";
+        default:
+            console.error("Unhandled value to find head or body from: ", value);
+    }
 }
 
 function updateSilhouetteFit() {
