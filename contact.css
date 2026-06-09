@@ -184,7 +184,7 @@ main a:visited:hover{
 @media (max-width: 768px) {
     body {
         background-position: top center;
-        background-size: 10dvh;
+        background-image: url("assets/placeholdersmall.png");
     }
     .burgertoggle {
         display: block;
