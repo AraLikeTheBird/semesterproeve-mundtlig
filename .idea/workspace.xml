@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="thats all for now folks">
-      <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="https://youtu.be/b9434BoGkNQ?si=0XEMlAOEUAjfL23P">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/placeholder.psd" beforeDir="false" afterPath="$PROJECT_DIR$/assets/placeholder.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creatorjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/creatorjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="responisve-fix-qouestion" />
+        <entry key="$PROJECT_DIR$" value="magic-dissapearing-pngs" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,6 +144,8 @@
       <workItem from="1780983727331" duration="941000" />
       <workItem from="1780988247663" duration="1389000" />
       <workItem from="1781008434419" duration="5014000" />
+      <workItem from="1781079448238" duration="318000" />
+      <workItem from="1781092196922" duration="2806000" />
     </task>
     <task id="LOCAL-00001" summary="nav bar for index">
       <option name="closed" value="true" />
@@ -427,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781040213126</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="https://youtu.be/b9434BoGkNQ?si=0XEMlAOEUAjfL23P">
+      <option name="closed" value="true" />
+      <created>1781079752590</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1781079752591</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now" />
     <MESSAGE value="5/22- 2026&#10;fucking finally got the grids to work" />
     <MESSAGE value="5/22- 2026&#10;safe point before fold out menue" />
@@ -470,7 +485,8 @@
     <MESSAGE value="solved?" />
     <MESSAGE value="ha ha this bish though it was solved" />
     <MESSAGE value="thats all for now folks" />
-    <option name="LAST_COMMIT_MESSAGE" value="thats all for now folks" />
+    <MESSAGE value="https://youtu.be/b9434BoGkNQ?si=0XEMlAOEUAjfL23P" />
+    <option name="LAST_COMMIT_MESSAGE" value="https://youtu.be/b9434BoGkNQ?si=0XEMlAOEUAjfL23P" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

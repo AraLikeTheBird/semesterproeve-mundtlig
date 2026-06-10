@@ -363,19 +363,7 @@ function switchOptions() {
         setDefaultOption();
     });
 }
-function resolveClothingFit(category, value) {
 
-    const bodyShape = currentBodyModel; // round / square / tall
-
-    // only apply fitting for clothing categories
-    if (!clothingMap[category]) {
-        return value;
-    }
-
-    const path = `assets/${category}/${value}-${bodyShape}.png`;
-
-    return path;
-}
 /* =========================
    AVATAR UPDATE
 ========================= */
@@ -417,6 +405,7 @@ function bodyOrHead(value) {
         case "bob-hair":
         case "bun":
         case "loose-hair":
+        case "empty-default":
             return "head";
         case "loose-skirt":
         case "wide-shorts":
@@ -434,53 +423,11 @@ function bodyOrHead(value) {
     }
 }
 
-function updateSilhouetteFit() {
-
-    const clothesLayer = document.getElementById("clothes-layer");
-    const traitsLayer = document.getElementById("physicaltraits-layer");
-
-    // BODY-based fitting
-    if (clothesLayer) {
-
-        if (currentBodyModel === "round") {
-            clothesLayer.dataset.fit = "soft";
-        }
-
-        if (currentBodyModel === "square") {
-            clothesLayer.dataset.fit = "sharp";
-        }
-
-        if (currentBodyModel === "tall-Rectangle") {
-            clothesLayer.dataset.fit = "tall";
-        }
-    }
-
-    // HEAD-based fitting
-    if (traitsLayer) {
-
-        if (currentHeadModel === "round") {
-            traitsLayer.dataset.fit = "soft";
-        }
-
-        if (currentHeadModel === "square") {
-            traitsLayer.dataset.fit = "sharp";
-        }
-
-        if (currentHeadModel === "tall-Rectangle") {
-            traitsLayer.dataset.fit = "tall";
-        }
-    }
-}
 /* =========================
    PROPORTIONS
 ========================= */
 
-function getBodyScale() {
-    return {
-        w: proportions.body.width,
-        h: proportions.body.height
-    };
-}
+
 function applyAvatarTransforms() {
 
     const body = document.getElementById("body-layer");
