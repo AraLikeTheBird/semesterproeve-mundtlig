@@ -322,7 +322,7 @@ footer a img:hover{
         width: 100%;
         padding: 20px;
         z-index: 10;
-        
+
     }
     .navlinks.active {
         display: flex;

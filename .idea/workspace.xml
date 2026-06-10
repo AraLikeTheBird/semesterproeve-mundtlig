@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="ha ha this bish though it was solved">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/contact.css" afterDir="false" />
+    <list default="true" id="77119239-1009-4c89-b456-45273f3bfad7" name="Changes" comment="thats all for now folks">
       <change beforePath="$PROJECT_DIR$/creator.css" beforeDir="false" afterPath="$PROJECT_DIR$/creator.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="responisve-fix-qouestion" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +78,7 @@
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "responisve-fix-qouestion",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/helen/PhpstormProjects/semesterproeve1alf/assets/shape/bodies",
     "list.type.of.created.stylesheet": "CSS",
@@ -421,7 +419,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781039332483</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="thats all for now folks">
+      <option name="closed" value="true" />
+      <created>1781040213126</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1781040213126</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="5/21-2026&#10;&#10;textboxes front page" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help" />
     <MESSAGE value="5/21-2026&#10;&#10;textboxes and video, still need help. its 1:41 am, i sleep now" />
     <MESSAGE value="5/22- 2026&#10;fucking finally got the grids to work" />
@@ -464,7 +469,8 @@
     <MESSAGE value="6/9-26&#10;09:18 am&#10;fixed responsiveness on creator.css" />
     <MESSAGE value="solved?" />
     <MESSAGE value="ha ha this bish though it was solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="ha ha this bish though it was solved" />
+    <MESSAGE value="thats all for now folks" />
+    <option name="LAST_COMMIT_MESSAGE" value="thats all for now folks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

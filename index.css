@@ -142,7 +142,7 @@ main{
     max-width: 1383px;
     background: #380f00;
     cursor: pointer;
-    object-fit: cover;
+    object-fit: fill;
 }
 .trybtn img {
     display: flex;
@@ -150,10 +150,10 @@ main{
     max-width: 700px;
 }
 .playbtn {
-    flex: 1;                  /* takes remaining space */
+    flex: 1;
     display: flex;
-    justify-content: center;  /* vertical centering inside area */
-    align-items: center;      /* horizontal centering */
+    justify-content: center;
+    align-items: center;
     transition: transform 0.6s ease;
 }
 .playbtn:hover{
