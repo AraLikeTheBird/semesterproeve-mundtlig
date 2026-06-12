@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
-<body>
+<body class="light">
     <header>
         <nav>
             <a class="logo" href="index.html"><img src="assets/headerlgog.png" alt="differently coloured shapes (a yellow triangle, a red circle and a blue rectangle." width="225px"></a>
@@ -76,16 +76,13 @@
                     </p>
                 </div>
             </aside>
-
         <!-- content ig -->
             <div class="right">
                <video controls autoplay muted loop class="video1">
-                    <source src="assets/video-placeholder.mp4" type="video/mp4" height="600">
+                    <source src="assets/video-placeholder.mp4" type="video/mp4" height="600" alt="a placeholder video. The screen is divided into two. one one side it says 'this is a placeholder video. the real one is about the character design process and how the creator tool can help">
                 </video>
                 <div class="playbtn">
-                    <a href="creator.html" class="trybtn">
-                        <img src="assets/trybtn.png" alt="Button to go to creator tool">
-                    </a>
+                    <button onclick="window.open('creator.html', '_blank')" class="trybtn">THE CREATOR TOOL NOW</button>
                 </div>
             </div>
         </aside>
@@ -103,7 +100,11 @@
         <a href="mailto:arw01@edu.zealand.dk" target="_blank">Mail</a>
         <a href="https://github.com/AraLikeTheBird/semesterproeve1alf" target="_blank"> GitHub</a>
     </footer>
-    <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
-<script src="javascrip.js"></script>
+    <div class="buttos">
+        <button id="themeToggle">◐</button>
+        <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+    </div>
+    <div id="themeRipple"></div>
+    <script src="javascrip.js"></script>
 </body>
 </html>
