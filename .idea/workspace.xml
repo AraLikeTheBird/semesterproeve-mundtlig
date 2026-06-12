@@ -37,12 +37,12 @@
     &quot;assignee&quot;: &quot;AraLikeTheBird&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AraLikeTheBird/semesterproeve-mundtlig.git",
-    "accountId": "3a9e2c9d-0525-43d5-b56d-942d7a07b617"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AraLikeTheBird/semesterproeve-mundtlig.git&quot;,
+    &quot;accountId&quot;: &quot;3a9e2c9d-0525-43d5-b56d-942d7a07b617&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/about.css" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -76,7 +76,7 @@
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "contrast",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/helen/PhpstormProjects/semesterproeve1alf/assets/shape/bodies",
