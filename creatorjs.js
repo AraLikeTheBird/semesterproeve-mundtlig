@@ -79,16 +79,7 @@ let proportions = {
 };
 let currentBodyModel = "empty-default";
 let currentHeadModel = "start-image";
-const clothingMap = {
-    shirts: {
-        "wide-crop-top": true,
-        "loose-wrap-shirt": true
-    },
-    pants: {
-        "wide-pants": true,
-        "wide-shorts": true
-    }
-};
+
 
 /* =========================
    ELEMENTS
@@ -97,24 +88,18 @@ const leftTitle = document.getElementById("leftTitle");
 const rightTitle = document.getElementById("rightTitle");
 const leftInfo = document.getElementById("leftInfo");
 const rightInfo = document.getElementById("rightInfo");
-const headLinkedLayers = [
-    "head-layer",
-    "physicaltraits-layer"
-];
 
-const bodyLinkedLayers = [
-    "body-layer",
-    "clothes-layer"
-];
 /* =========================
    CONFIG
 ========================= */
 const optionDescriptions = {
+    "start-image": "The starting image for this creator. Read the instructions on it!",
     "round": "Round shapes create a friendly, soft, and approachable impression. In shape language, they are often used for kind, gentle, playful, or trustworthy characters because their smooth curves feel safe and welcoming.",
-    "tall-Rectangle": "Tall rectangular shapes suggest structure, formality, and upward movement. They often imply discipline, authority, or elegance, with a composed but slightly rigid or distant presence.",
+    "tall-rectangle": "Tall rectangular shapes suggest structure, formality, and upward movement. They often imply discipline, authority, or elegance, with a composed but slightly rigid or distant presence.",
     "square": "Square shapes suggest stability, strength, and grounded personality. A square head or body often reads as solid, reliable, and emotionally steady, sometimes even stubborn or unchanging.",
-    "Triangle":"A downward triangle body or head suggests instability, tension, or vulnerability. It creates a top-heavy imbalance, often reading as anxious, sharp, or emotionally intense in character design.",
+    "triangle":"A Triangle body or head suggests unpredictability, speed and danger. It creates a top-heavy imbalance, often reading as anxious, sharp, or emotionally intense in character design.",
 
+    "empty-default": "Just an empty default image with the developers signature.",
     "pointed-ears": "Elven ears sharpen a character’s silhouette and add a sense of fantasy or otherness. They often signal heightened sensitivity, elegance, or connection to nature, subtly shifting perception toward non-human traits.",
     "human-ears": "Standard human ears create a neutral, familiar silhouette that feels grounded and realistic. They reduce stylization, making the character more relatable, understated, and less visually expressive than animal or exaggerated ear forms.",
     "bob-hair": "A bob haircut creates a clean, rounded silhouette with clear facial framing. In flat black, it reads as structured and youthful, emphasizing head shape, symmetry, and sharp readability of expression. it can also read as helmet-y, depending on the character",
@@ -124,7 +109,14 @@ const optionDescriptions = {
     "wide-crop-top": "A wide crop top expands the upper silhouette, creating a broader, more relaxed shape. In flat black, it reads as casual, open, slightly playful, and visually weighty across the shoulders and torso.",
     "loose-wrap-shirt": "A loose wrap shirt softens the silhouette, breaking rigid structure into flowing, irregular shapes. It suggests ease, flexibility, and movement, reducing sharpness and creating a more relaxed, layered visual expression.",
 
-
+    "wide-pants": "Wide pants broaden the lower silhouette, creating a heavier, more grounded shape. In black and white, they increase visual weight, reduce leg definition, and can suggest stability, looseness, or relaxed movement.",
+    "wide-shorts": "Wide shorts add horizontal volume to a character’s silhouette, making the lower body appear broader and more grounded. In black and white, they emphasize width, balance, and a more relaxed, stable shape.",
+    "loose-skirt": "A loose skirt softens the lower silhouette, adding flow and movement. It creates a wider, more circular base shape, reducing sharpness and making the character feel lighter and more dynamic.",
+    "bolero-jacket": "A wide bolero jacket expands the upper silhouette, emphasizing shoulders and torso width. It creates a strong horizontal shape, making the character appear broader, more structured, and visually grounded.",
+    "trench-coat": "A trench coat elongates the silhouette, creating a tall vertical shape. Its straight lines and flowing edges add weight and structure, making the character feel composed, serious, and slightly mysterious.",
+    "cape": "A cape dramatically expands the silhouette, forming a large flowing shape around the body. It increases visual size, adds movement, and creates a strong, iconic, and often heroic presence.",
+    "scarf": "A scrunched thick scarf adds bulk around the neck and upper torso, breaking the neck line. It creates uneven volume, making the silhouette feel warmer, heavier, and more layered.",
+    "flannel": "A flannel tied around the waist adds asymmetry and horizontal detail. It breaks the clean leg line, adding visual interest and a casual layered effect that slightly widens the lower silhouette.",
 };
 const modeDefaults = {
     shape: "head",
@@ -133,9 +125,9 @@ const modeDefaults = {
 };
 
 const modeInfo = {
-    shape: "Shape controls the base structure of the head/body.",
-    silhouette: "Silhouette defines the outer outline of the avatar.",
-    proportion: "Proportion adjusts size relationships between body parts."
+    shape: "Shape language is the use of basic forms—circles, squares, and triangles—to communicate a character’s personality and role visually. It is important in character design because it allows audiences to understand traits instantly through shape, supporting “show, don’t tell” and making characters more readable, memorable, and visually effective.",
+    silhouette: "A silhouette is the outer outline of a character when reduced to a solid shape, without internal details. It is important in character design because it ensures instant recognition, improves readability at a distance, and communicates personality and role through shape alone.",
+    proportion: "Proportions refer to the size relationships between different parts of a character’s body, such as head, torso, and limbs. In character design, proportions are important because they help communicate personality, age, and role, making the character visually readable and expressive even without dialogue or detail."
 };
 
 /* =========================
