@@ -100,6 +100,7 @@ main{
     padding: 10px;
     max-height: 204px;
     overflow-y:scroll;
+    width: fit-content;
 }
 .tbox .title{
     font-size: clamp(20px, 2vh, 30px);
@@ -153,7 +154,7 @@ main{
 }
 .content {
     color: #380F00;
-    text-align: justify;
+    text-align: left;
 }
 footer{
     text-align: center;
@@ -194,6 +195,12 @@ footer a img{
 footer a img:hover{
     transform: scale(0.85);
 }
+
+.content, .title{
+    width: 42dvh;
+    padding: 2px;
+}
+
 
 .buttos{
     display: flex;
@@ -295,6 +302,7 @@ body.dark nav{
 body.dark .navlinks a{
     font-size: 50px;
 }
+
 body.dark button{
     background-color: #F5F5F5;
     color: #001629;
@@ -302,6 +310,7 @@ body.dark button{
 }
 body.dark .tbox{
     background-color: #001629;
+
 }
 body.dark .right{
     background-color: #001629;
@@ -320,6 +329,9 @@ body.dark button:hover{
 }
 body.dark video{
     filter: invert(100);
+}
+body.dark .title{
+font-size: 1.5em;
 }
 body.dark #scrollTopBtn{
     background-color: #F5F5F5;
@@ -363,7 +375,6 @@ body.dark #themeToggle:hover{
 
     transition: transform 2s ease-out;
 }
-
 #themeRipple.active {
     transform: scale(290);
 }
@@ -384,7 +395,14 @@ body.dark #themeToggle:hover{
         width: 100%;
         padding: 20px;
     }
-
+    body.dark .navlinks{
+        background-color: #001629;
+        color: #F5F5F5;
+    }
+    body.dark .burgertoggle{
+        font-size: 100px;
+        color: #F5F5F5;
+    }
     .navlinks.active {
         display: flex;
         flex-direction: column;

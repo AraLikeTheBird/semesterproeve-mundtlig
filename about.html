@@ -30,6 +30,7 @@
             <div class="layout">
                 <div class="left-column">
                     <div class="card">
+                        <div class="text">
                         <h3>How Did We Get Here</h3>
                         <p> This project originally began as my end-of-semester exam. We were assigned to create a digital
                             teaching tool designed to help a hypothetical future multimedia student — someone who might need
@@ -48,8 +49,10 @@
                             This site is still a work in progress, but it represents an attempt to turn theory into something hands-on.
                             I hope it can be useful not only as a learning tool, but also as a way to spark curiosity in anyone interested
                             in how characters are designed and why they look the way they do.</p>
+                        </div>
                     </div>
                     <div class="card">
+                        <div class="text">
                         <h3> Why Use This Tool</h3>
                         <p> Character design is often something people understand best when they can see it change in real
                             time. Reading about concepts like shape language, proportion, and silhouette can be helpful,
@@ -64,31 +67,34 @@
                             principles in your own creative work later on. In short, the tool turns theory into experience.
                             It is meant to support learning by making character design something you can actively play with,
                             test, and understand rather than just read about. </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="right-side">
-                    <img class=profile-image src="assets/profileimage.jpg" alt="close up picture taken from the front.
-                    The person on the camera is wearing glasses and have a few piercings as well as dyed blue hair.
-                    their eyes are brown and they are wearing a grey shirt" width="140px" height="140px">
-                    <h3>Who am I?</h3>
-                    <p>Ara (also known as Ara Bird) is a multimedia design student and the creator behind CharaCraft.
-                        This project was developed as part of an end-of-semester exam, where the goal was to design and
-                        build a digital teaching tool aimed at introducing future multimedia students to a chosen subject.
-                        In this case, the subject became character design. Ara is responsible for the entire development of
-                        the site — including concept, visual design, user experience, and all coding in HTML, CSS, and JavaScript.
-                        The project was built as a fully interactive learning tool, rather than a traditional text-based learning
-                        resource, with a focus on hands-on exploration and visual understanding. The idea behind CharaCraft
-                        comes from a strong interest in both character design and future animation studies, as well as a
-                        broader belief in gamified learning. Instead of passively reading theory, users are encouraged to
-                        actively experiment with shape, proportion, and silhouette to understand how design choices affect
-                        character identity. While there was no single defining moment that sparked the idea, the project grew
-                        from a simple concept: creating a Picrew-style character creator with an educational layer built into
-                        it. This combination of playful interaction and structured learning reflects Ara’s approach to design —
-                        where theory and creativity are not separate, but integrated. Through this project, Ara aims to demonstrate
-                        an understanding of core character design principles while also exploring how digital tools can make
-                        learning more intuitive, engaging, and visually driven.
-                    </p>
+                    <div class="text">
+                        <img class=profile-image src="assets/profileimage.jpg" alt="close up picture taken from the front.
+                        The person on the camera is wearing glasses and have a few piercings as well as dyed blue hair.
+                        their eyes are brown and they are wearing a grey shirt" width="140px" height="140px">
+                        <h3>Who am I?</h3>
+                        <p>Ara (also known as Ara Bird) is a multimedia design student and the creator behind CharaCraft.
+                            This project was developed as part of an end-of-semester exam, where the goal was to design and
+                            build a digital teaching tool aimed at introducing future multimedia students to a chosen subject.
+                            In this case, the subject became character design. Ara is responsible for the entire development of
+                            the site — including concept, visual design, user experience, and all coding in HTML, CSS, and JavaScript.
+                            The project was built as a fully interactive learning tool, rather than a traditional text-based learning
+                            resource, with a focus on hands-on exploration and visual understanding. The idea behind CharaCraft
+                            comes from a strong interest in both character design and future animation studies, as well as a
+                            broader belief in gamified learning. Instead of passively reading theory, users are encouraged to
+                            actively experiment with shape, proportion, and silhouette to understand how design choices affect
+                            character identity. While there was no single defining moment that sparked the idea, the project grew
+                            from a simple concept: creating a Picrew-style character creator with an educational layer built into
+                            it. This combination of playful interaction and structured learning reflects Ara’s approach to design —
+                            where theory and creativity are not separate, but integrated. Through this project, Ara aims to demonstrate
+                            an understanding of core character design principles while also exploring how digital tools can make
+                            learning more intuitive, engaging, and visually driven.
+                         </p>
+                    </div>
                 </div>
             </div>
        </main>
@@ -105,7 +111,11 @@
            <a href="mailto:arw01@edu.zealand.dk" target="_blank">Mail</a>
            <a href="https://github.com/AraLikeTheBird/semesterproeve1alf" target="_blank"> GitHub</a>
        </footer>
-       <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+       <div class="buttos">
+           <button id="themeToggle">◐</button>
+           <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+       </div>
+       <div id="themeRipple"></div>
        <script src="javascrip.js"></script>
 </body>
 </html>
