@@ -12,7 +12,7 @@ body {
     background: #fff5ed;
     display: flex;
     flex-direction: column;
-    min-height: 130vh
+    min-height: 130dvh;
 }
 body {
     transition: background 0.3s, color 0.3s;
@@ -126,7 +126,6 @@ main{
     align-items: center;
     font-size: 7dvh;
     font-weight: bolder;
-    line-height: -1;
     border-radius: 50px;
     padding: 40px 20px;
     border: 0px solid #a82f2f;
@@ -195,7 +194,6 @@ footer a img{
 footer a img:hover{
     transform: scale(0.85);
 }
-
 .content, .title{
     width: 42dvh;
     padding: 2px;
@@ -278,7 +276,6 @@ footer a img:hover{
             0 1px currentColor,
             0 -1px currentColor;
 }
-
 
 body.dark {
     background-color: #121212;
@@ -384,7 +381,6 @@ body.dark #themeToggle:hover{
     .burgertoggle {
         display: block;
     }
-
     .navlinks {
         display: none;
         flex-direction: column;
@@ -394,13 +390,24 @@ body.dark #themeToggle:hover{
         left: 0;
         width: 100%;
         padding: 20px;
+        z-index: 2;
     }
+    body.dark img{
+        height: 14dvh;
+    }
+    body.dark .content{
+        font-size: 25px;
+    }
+    body.dark .title{
+        font-size: 35px;
+    }
+
     body.dark .navlinks{
         background-color: #001629;
         color: #F5F5F5;
     }
     body.dark .burgertoggle{
-        font-size: 100px;
+        font-size: 72px;
         color: #F5F5F5;
     }
     .navlinks.active {
@@ -413,52 +420,51 @@ body.dark #themeToggle:hover{
         height: auto;   /* IMPORTANT */
         gap: 15px;
     }
-
     .footer-links {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-
+    body.dark button{
+        height: 15dvh;
+        width: auto;
+        font-size: 1em;
+    }
     footer a {
         display: block;
     }
-
     .page {
         display: flex;
         flex-direction: column-reverse;
-
+        align-items: center;
     }
-
     /* LEFT becomes full width row 1 */
     .left {
         margin: 10px;
         gap: 10px;
+        justify-content: center;
+        width: fit-content;
+        min-width: 304px;
     }
-
     /* RIGHT becomes row 2 */
     .right {
         margin: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: fit-content;
+        min-width: 304px
     }
-    .right img {
-        margin: 10px;
-        align-items: center; /* prevents weird centering shrink */
-    }
-    .trybtn img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
+
     /* reduce spacing between blocks */
     .tbox {
         max-height: 160px; /* smaller scroll areas */
         font-size: 14px;
 
     }
-
+    .title, .content{
+        width: stretch;
+    }
     .tbox .title {
         font-size: clamp(18px, 4vw, 24px);
     }
@@ -493,6 +499,12 @@ body.dark #themeToggle:hover{
     }
     footer{
         color: #FFE9D9;
+    }
+
+    .trybtn{
+        height: 1dvh;
+        width: auto;
+        font-size: 2em;
     }
 
 }

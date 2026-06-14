@@ -284,6 +284,7 @@ body.dark {
     background-color: #121212;
     color: #F5F5F5;
     font-size: 30px;
+    width: fit-content;
 }
 body.dark .bg{
     filter: invert(100);
@@ -380,12 +381,12 @@ body.dark .profile-image{
     }
     p {
         font-size: 1.1rem;
+        text-align: left;
     }
     .profile-image {
         width: 100px;
         height: 100px;
     }
-
 
     footer {
             padding: 20px;
@@ -408,5 +409,9 @@ body.dark .profile-image{
         }
     footer{
         color: #FFE9D9;
+    }
+
+    .layout{
+        padding-right: 10px;
     }
 }
