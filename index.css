@@ -377,7 +377,10 @@ body.dark #themeToggle:hover{
 }
     /* responsive scale */
 @media (max-width: 768px) {
-
+footer p{
+    display: flex;
+    justify-content: center;
+}
     .burgertoggle {
         display: block;
     }

@@ -574,6 +574,11 @@ body.dark .silhouette-mode img{
         gap: 10px;
         color: #FFE9D9;
     }
+
+    footer p{
+        display: flex;
+        justify-content: center;
+    }
     .footer-links a{
         color: #FFE9D9;
     }

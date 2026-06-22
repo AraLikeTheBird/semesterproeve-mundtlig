@@ -379,6 +379,10 @@ body.dark .profile-image{
     h2 {
         font-size: 1.5rem;
     }
+    footer p{
+        display: flex;
+        justify-content: center;
+    }
     p {
         font-size: 1.1rem;
         text-align: left;

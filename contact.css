@@ -333,6 +333,10 @@ body.dark .contact{
     body.dark .contact{
         width: 30dvh;
     }
+    footer p{
+         display: flex;
+         justify-content: center;
+     }
     .burgertoggle {
         display: block;
     }
